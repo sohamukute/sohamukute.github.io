@@ -267,8 +267,8 @@ section {
   margin-right: 5%; /* Space between image and content */
 }
 .profile-picture {
-  width: 400px; /* Adjust size as needed (e.g., 200px matches the current placeholder size) */
-  height: 400px; /* Should match width for a perfect circle */
+  width: 350px; /* Adjust size as needed (e.g., 200px matches the current placeholder size) */
+  height: 350px; /* Should match width for a perfect circle */
   border-radius: 50%; /* Creates the circular shape */
   overflow: hidden; /* Hides any overflow outside the circle */
   display: flex;
