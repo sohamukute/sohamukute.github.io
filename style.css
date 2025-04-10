@@ -254,7 +254,7 @@ section {
   padding: 0 2rem;
   position: relative;
   overflow: hidden;
-  background: url('assets/8.png') no-repeat center center/cover;
+  background: #f5deb3; /* Creme color */
   opacity: 0.9; /* Slightly increased opacity for better visibility */
   color: var(--light-text); /* Ensures text is visible on the background */
 }
@@ -267,8 +267,8 @@ section {
   margin-right: 5%; /* Space between image and content */
 }
 .profile-picture {
-  width: 350px; /* Adjust size as needed (e.g., 200px matches the current placeholder size) */
-  height: 350px; /* Should match width for a perfect circle */
+  width: 320px; /* Adjust size as needed (e.g., 200px matches the current placeholder size) */
+  height: 320px; /* Should match width for a perfect circle */
   border-radius: 50%; /* Creates the circular shape */
   overflow: hidden; /* Hides any overflow outside the circle */
   display: flex;
@@ -294,7 +294,7 @@ section {
 .hero-name {
   font-size: 4.5rem; /* Even larger name */
   font-weight: 800;
-  color: rgb(0, 0, 0); /* Ensures the text appears in white */
+  color: rgb(255, 255, 255); /* Ensures the text appears in white */
   margin-bottom: 1rem;
   letter-spacing: 1px;
 }
