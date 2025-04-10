@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soham Kute | Electronics Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header>
+        <nav id="navbar">
+            <div class="logo">Soham Kute</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-image">
+                <div class="profile-picture">
+                    <img src="assets/7.jpeg" alt="Soham Kute Profile Picture" class="profile-img">
+                </div>
+            </div>   
+            <div class="hero-content">
+                <h1 class="hero-name">
+                    <span id="typed-name"></span>
+                </h1>
+                <script>
+                    const name = "Soham Kute";
+                    let index = 0;
+                    const speed = 150; // typing speed in milliseconds
+
+                    function typeWriter() {
+                        if (index < name.length) {
+                            document.getElementById("typed-name").innerHTML += name.charAt(index);
+                            index++;
+                            setTimeout(typeWriter, speed);
+                        }
+                    }
+
+                    document.addEventListener("DOMContentLoaded", typeWriter);
+                </script>
+                <div class="typewriter">
+                    <h2 id="typewriter-text"></h2>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:officialsohamkute@gmail.com" class="social-icon email" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="www.linkedin.com/in/sohamukute" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/sohamukute" target="_blank" class="social-icon github" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://instagram.com/sohamk.9305" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View My Work</a>
+                    <a href="#contact" class="btn secondary">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm <strong>Soham Kute</strong>, an Electronics Engineering student at Veermata Jijabai Technological Institute (VJTI) in Mumbai with a minor in Aerospace Engineering. My passion lies at the intersection of electronics, robotics, and aerospace technologies.</p>
+                    
+                    <p>Currently pursuing my B.Tech degree (2023-2027), I focus on developing innovative solutions to complex engineering problems. My academic journey, which began at St. Lawrence High School and Junior College in Nashik (where I achieved 93.4% in 10th grade and 84% in 12th grade), has equipped me with a strong foundation in mathematics and physics.</p>
+                    
+                    <p>I'm particularly interested in control systems, embedded systems development, and autonomous robotics. When I'm not coding or soldering, you can find me exploring new technologies or contributing to projects at the Society of Robotics and Automation (SRA) at VJTI.</p>
+
+                    <p>I believe in continuous learning and am always eager to connect with like-minded individuals who share my passion for technology and innovation. Whether it's collaborating on a project or discussing emerging tech trends, I'm always open to new opportunities and connections!</p>
+                </div>
+                <div class="about-stats">
+                    <div class="education">
+                        <h3>Education</h3>
+                        <div class="education-item">
+                            <h4>B.Tech in Electronics Engineering</h4>
+                            <p>Veermata Jijabai Technological Institute, Mumbai</p>
+                            <p>2023 - 2027 | CGPA: 7.77</p>
+                            <p><em>Minor in Aerospace Engineering</em></p>
+                        </div>
+                        <div class="education-item">
+                            <h4>SSC & HSC</h4>
+                            <p>St. Lawrence High School and Junior College, Nashik</p>
+                            <p>10th Grade: 93.4% | 12th Grade: 84%</p>
+                            <p>2008 - 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="aerospace">Aerospace</button>
+                <button class="filter-btn" data-filter="robotics">Robotics</button>
+                <button class="filter-btn" data-filter="embedded">Embedded Systems</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-categories="aerospace embedded robotics">
+                    <div class="project-image">
+                        <img src="assets/1.jpeg" alt="Gyroglider Project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Gyroglider</h3>
+                        <p class="project-tags">Aerospace, Control Systems, CAD, Embedded Systems</p>
+                        <p class="project-desc">A research-based project focused on developing a morphable robot for rough terrain navigation.</p>
+                        <a href="https://drive.google.com/file/d/1NrBPwSYJlXnfuGrkyaTRC5yj8jqFn5Kz/view" class="btn project-btn">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-categories="robotics embedded">
+                    <div class="project-image">
+                        <img src="assets/6.png" alt="Fire Extinguisher Bot">
+                    </div>
+                    <div class="project-info">
+                        <h3>Fire Extinguisher Bot</h3>
+                        <p class="project-tags">ESP32, ESP32-CAM, MQ-2 Sensor, YOLOv8, Embedded C</p>
+                        <p class="project-desc">An autonomous fire-extinguishing robot based on the Wall-E Bot platform.</p>
+                        <a href="https://drive.google.com/file/d/1u7HnwI503rmUoBTRtKNt8UNvo_uWq7Xg/view?usp=sharing" class="btn project-btn">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-categories="robotics embedded">
+                    <div class="project-image">
+                        <img src="assets/4.png" alt="SRA AutoSim Challenge">
+                    </div>
+                    <div class="project-info">
+                        <h3>SRA AutoSim Challenge (SAC)</h3>
+                        <p class="project-tags">C, Assembly, Line Sensing Array, PID Control</p>
+                        <p class="project-desc">A line-following robot using the LFBR algorithm with PID tuning for precise control.</p>
+                        <a href="https://drive.google.com/drive/folders/1mPeQnlcpO9GExifaaJFAJ70WTQ1qNEH5?usp=sharing" class="btn project-btn">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-categories="robotics">
+                    <div class="project-image">
+                        <img src="assets/5.jpeg" alt="e-Yantra Logistics CoBot">
+                    </div>
+                    <div class="project-info">
+                        <h3>e-Yantra Logistics CoBot</h3>
+                        <p class="project-tags">ROS2, Gazebo, MoveIt!, OpenCV, ArUco Markers</p>
+                        <p class="project-desc">An autonomous robotic system for warehouse logistics using ROS2 and Gazebo.</p>
+                        <a href="https://github.com/eYantra-Robotics-Competition/eyrc-24-25-logistic-cobot" class="btn project-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Operating Systems</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux (Ubuntu)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-windows"></i>
+                            <span>Windows</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-icon">C</span>
+                            <span>C</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">C++</span>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Developer Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git/GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Google Colab</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Technologies/Frameworks</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-calculator"></i>
+                            <span>NumPy</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-table"></i>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-microchip"></i>
+                            <span>ESP-IDF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>Society of Robotics and Automation (SRA), VJTI</h3>
+                    <p class="timeline-date">May 2024 - Present</p>
+                    <p class="timeline-role">SY Active Member</p>
+                    <ul class="timeline-achievements">
+                        <li>Working on the Gyroglider project under the Eklavya Mentorship Program</li>
+                        <li>Volunteered in organizing and conducting workshops for 150+ first-year students</li>
+                        <li>Taught topics like Motor driver and line following in Wall-E</li>
+                    </ul>
+                    <a href="https://sravjti.in/" target="_blank" class="btn secondary small">Visit SRA Website</a>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                <i class="fas fa-code"></i>
+                </div>
+                <div class="timeline-content">
+                <h3>Google Summer of Code (GSoC) Proposal - VideoLAN</h3>
+                <p class="timeline-date">Ongoing</p>
+                <p class="timeline-role">Contributor</p>
+                <ul class="timeline-achievements">
+                    <li>Submitted a GSoC proposal to VideoLAN organization</li>
+                    <li>Working on DAV1D RISC-V optimizations to enhance video decoding performance</li>
+                    <li>Collaborating with mentors to refine and implement the proposal</li>
+                </ul>
+                <a href="https://www.videolan.org/" target="_blank" class="btn secondary small">VideoLAN Website</a>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="blog" class="blog">
+            <h2 class="section-title">Blog</h2>
+            <div class="blog-content">
+                <div class="blog-coming-soon">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Coming Soon!</h3>
+                    <p>I'll be sharing my insights, learning experiences, and technical knowledge here soon. Stay tuned!</p>
+                </div>
+                <div class="blog-topics">
+                    <h3>Topics I'll Be Covering</h3>
+                    <div class="topic-tags">
+                        <span class="topic-tag">Embedded Systems</span>
+                        <span class="topic-tag">Robotics</span>
+                        <span class="topic-tag">Control Systems</span>
+                        <span class="topic-tag">Aerospace Engineering</span>
+                        <span class="topic-tag">Electronics</span>
+                        <span class="topic-tag">Programming</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>I'm always excited to connect with like-minded individuals, potential collaborators, or anyone interested in technology and engineering. Whether you have a project idea, job opportunity, or just want to say hello, feel free to reach out!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div class="method-details">
+                                <h4>Email</h4>
+                                <a href="mailto:officialsohamkute@gmail.com">officialsohamkute@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div class="method-details">
+                                <h4>Phone</h4>
+                                <a href="tel:+918799906942">+91 8799906942</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="method-details">
+                                <h4>Location</h4>
+                                <p>Mumbai, Maharashtra, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links contact-social">
+                        <a href="www.linkedin.com/in/sohamukute" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/sohamukute" target="_blank" class="social-icon github" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://instagram.com/soham_kute" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/xzzeyywe" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Soham Kute</div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="mailto:officialsohamkute@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="www.linkedin.com/in/sohamukute" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/sohamukute" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://instagram.com/sohamk.9305" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Soham Kute. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
