@@ -1,427 +1,656 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark" style="color-scheme: dark;">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soham Kute | Electronics Engineer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soham Kute - Systems &amp; Distributed Backend Engineer</title>
+  <meta name="description" content="Personal portfolio of Soham Kute, Systems and Distributed Backend Engineer at VJTI Mumbai. Creator of echo-log, GrabMySeat, and FeedRank.">
+  
+  <!-- Preload Fonts -->
+  <link rel="preload" href="fonts/797e433ab948586e-s.p.29207c2f.woff2" as="font" crossorigin type="font/woff2">
+  <link rel="preload" href="fonts/DancingScript_Variable-s.p.5bdf642a.woff2" as="font" crossorigin type="font/woff2">
+  <link rel="preload" href="fonts/Telma_Variable-s.p.219f7f2c.woff2" as="font" crossorigin type="font/woff2">
+  <link rel="preload" href="fonts/caa3a2e1cccd8315-s.p.3b6cae6d.woff2" as="font" crossorigin type="font/woff2">
+  
+  <!-- Stylesheet from reference -->
+  <link href="css/6252e57c31165fc0.css" rel="stylesheet">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  
+  <style>
+    /* Custom font bindings matching reference */
+    @font-face {
+      font-family: 'DancingScript';
+      src: url('fonts/DancingScript_Variable-s.p.5bdf642a.woff2') format('woff2');
+      font-weight: 400 700;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Telma';
+      src: url('fonts/Telma_Variable-s.p.219f7f2c.woff2') format('woff2');
+      font-weight: 400 900;
+      font-display: swap;
+    }
+    
+    .font-brand {
+      font-family: 'DancingScript', cursive, sans-serif;
+    }
+    
+    .font-telma {
+      font-family: 'Telma', sans-serif;
+    }
+
+    /* Accent brand cyan marker matching reference */
+    .bg-accent-brand {
+      background-color: #22d3ee;
+    }
+    .text-accent-brand {
+      color: #22d3ee;
+    }
+    
+    /* Smooth transitions */
+    * {
+      scroll-behavior: smooth;
+    }
+    
+    /* Avatar glow */
+    .avatar-glow {
+      box-shadow: 0 0 40px -10px rgba(34, 211, 238, 0.2);
+    }
+    .dark .avatar-glow {
+      box-shadow: 0 0 45px -8px rgba(34, 211, 238, 0.25);
+    }
+  </style>
 </head>
-<body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
-    <header>
-        <nav id="navbar">
-            <div class="logo">Soham Kute</div>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+<body class="antialiased bg-background text-foreground min-h-dvh flex flex-col selection:bg-neutral-200 dark:selection:bg-neutral-800">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
+    <div class="mx-auto flex h-14 w-full max-w-3xl items-center justify-between px-4 sm:px-6">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="font-brand text-2xl font-bold tracking-tight text-foreground transition-opacity hover:opacity-80">
+        soham<span class="text-accent-brand">.</span>
+      </a>
+
+      <!-- Navigation & Controls -->
+      <div class="flex items-center gap-4 sm:gap-6">
+        <nav class="flex items-center gap-4 sm:gap-6 text-sm">
+          <a href="#work" class="relative py-1 font-semibold text-muted-foreground hover:text-foreground transition-colors">
+            Work
+          </a>
+          <a href="#projects" class="relative py-1 font-semibold text-muted-foreground hover:text-foreground transition-colors">
+            Projects
+          </a>
+          <a href="#learning" class="relative py-1 font-semibold text-accent-brand hover:opacity-80 transition-colors flex items-center gap-1.5">
+            <span class="inline-block w-1.5 h-1.5 rounded-full bg-accent-brand animate-pulse"></span>
+            Learn
+          </a>
+          <a href="#about" class="relative py-1 font-semibold text-muted-foreground hover:text-foreground transition-colors">
+            About
+          </a>
         </nav>
-    </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-image">
-                <div class="profile-picture">
-                    <img src="assets/7.jpeg" alt="Soham Kute Profile Picture" class="profile-img">
-                </div>
-            </div>   
-            <div class="hero-content">
-                <h1 class="hero-name">
-                    <span id="typed-name"></span>
-                </h1>
-                <script>
-                    const name = "Soham Kute";
-                    let index = 0;
-                    const speed = 150; // typing speed in milliseconds
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="p-2 text-muted-foreground hover:text-foreground rounded-lg transition-colors cursor-pointer" aria-label="Toggle theme">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg id="sunIcon" class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg id="moonIcon" class="w-4 h-4 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
 
-                    function typeWriter() {
-                        if (index < name.length) {
-                            document.getElementById("typed-name").innerHTML += name.charAt(index);
-                            index++;
-                            setTimeout(typeWriter, speed);
-                        }
-                    }
+      </div>
+    </div>
+  </header>
 
-                    document.addEventListener("DOMContentLoaded", typeWriter);
-                </script>
-                <div class="typewriter">
-                    <h2 id="typewriter-text"></h2>
-                </div>
-                <div class="social-links">
-                    <a href="mailto:officialsohamkute@gmail.com" class="social-icon email" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/sohamukute/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/sohamukute" target="_blank" class="social-icon github" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://instagram.com/sohamk.9305" target="_blank" class="social-icon instagram" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary">View My Work</a>
-                    <a href="#contact" class="btn secondary">Get In Touch</a>
-                </div>
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <div class="mx-auto flex min-h-dvh w-full flex-col max-w-3xl px-4 sm:px-6">
+    <main class="flex flex-1 flex-col pt-8 pb-16 space-y-14">
+
+      <!-- ==================== HERO SECTION ==================== -->
+      <section class="space-y-8 pt-4 pb-2">
+        <div class="flex flex-col-reverse md:flex-row md:items-center justify-between gap-8">
+          
+          <!-- Bio / Intro -->
+          <div class="space-y-4 max-w-lg">
+            
+            <!-- Availability Pill -->
+            <div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-500 tracking-wide uppercase">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+              Available for work &bull; Let&#39;s build something cool
             </div>
-        </section>
 
-        <section id="about" class="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Hello! I'm <strong>Soham Kute</strong>, an Electronics Engineering student at Veermata Jijabai Technological Institute (VJTI) in Mumbai with a minor in Aerospace Engineering. My passion lies at the intersection of electronics, robotics, and aerospace technologies.</p>
-                    
-                    <p>Currently pursuing my B.Tech degree (2023-2027), I focus on developing innovative solutions to complex engineering problems. My academic journey, which began at St. Lawrence High School and Junior College in Nashik (where I achieved 93.4% in 10th grade and 84% in 12th grade), has equipped me with a strong foundation in mathematics and physics.</p>
-                    
-                    <p>I'm particularly interested in control systems, embedded systems development, and autonomous robotics. When I'm not coding or soldering, you can find me exploring new technologies or contributing to projects at the Society of Robotics and Automation (SRA) at VJTI.</p>
+            <!-- Name & Title -->
+            <div>
+              <h1 class="font-brand text-5xl sm:text-6xl font-bold tracking-tight text-foreground">
+                soham<span class="text-accent-brand">.</span>
+              </h1>
+              <h2 class="text-lg font-mono font-medium text-muted-foreground mt-1">
+                Backend &amp; Systems Engineer
+              </h2>
+            </div>
 
-                    <p>I believe in continuous learning and am always eager to connect with like-minded individuals who share my passion for technology and innovation. Whether it's collaborating on a project or discussing emerging tech trends, I'm always open to new opportunities and connections!</p>
-                </div>
-                <div class="about-stats">
-                    <div class="education">
-                        <h3>Education</h3>
-                        <div class="education-item">
-                            <h4>B.Tech in Electronics Engineering</h4>
-                            <p>Veermata Jijabai Technological Institute, Mumbai</p>
-                            <p>2023 - 2027 | CGPA: 7.77</p>
-                            <p><em>Minor in Aerospace Engineering</em></p>
-                        </div>
-                        <div class="education-item">
-                            <h4>SSC & HSC</h4>
-                            <p>St. Lawrence High School and Junior College, Nashik</p>
-                            <p>10th Grade: 93.4% | 12th Grade: 84%</p>
-                            <p>2008 - 2021</p>
-                        </div>
-                    </div>
-                </div>
+            <!-- Location & Live Clock -->
+            <div class="flex items-center gap-2 text-xs font-mono text-muted-foreground tracking-wider uppercase">
+              <svg style="width:13px; height:13px; min-width:13px; display:inline-block; vertical-align:text-bottom;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Mumbai, India</span>
+              <span>/</span>
+              <span id="liveClock">--:--:-- --</span>
             </div>
-        </section>
 
-        <section id="projects" class="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="aerospace">Aerospace</button>
-                <button class="filter-btn" data-filter="robotics">Robotics</button>
-                <button class="filter-btn" data-filter="embedded">Embedded Systems</button>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card" data-categories="aerospace embedded robotics">
-                    <div class="project-image">
-                        <img src="assets/1.jpeg" alt="Gyroglider Project">
-                    </div>
-                    <div class="project-info">
-                        <h3>Gyroglider</h3>
-                        <p class="project-tags">Aerospace, Control Systems, CAD, Embedded Systems</p>
-                        <p class="project-desc">A research-based project focused on developing a morphable robot for rough terrain navigation.</p>
-                        <a href="https://drive.google.com/file/d/1NrBPwSYJlXnfuGrkyaTRC5yj8jqFn5Kz/view" class="btn project-btn">View Details</a>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-categories="robotics embedded">
-                    <div class="project-image">
-                        <img src="assets/6.png" alt="Fire Extinguisher Bot">
-                    </div>
-                    <div class="project-info">
-                        <h3>Fire Extinguisher Bot</h3>
-                        <p class="project-tags">ESP32, ESP32-CAM, MQ-2 Sensor, YOLOv8, Embedded C</p>
-                        <p class="project-desc">An autonomous fire-extinguishing robot based on the Wall-E Bot platform.</p>
-                        <a href="https://drive.google.com/file/d/1u7HnwI503rmUoBTRtKNt8UNvo_uWq7Xg/view?usp=sharing" class="btn project-btn">View Details</a>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-categories="robotics embedded">
-                    <div class="project-image">
-                        <img src="assets/4.png" alt="SRA AutoSim Challenge">
-                    </div>
-                    <div class="project-info">
-                        <h3>SRA AutoSim Challenge (SAC)</h3>
-                        <p class="project-tags">C, Assembly, Line Sensing Array, PID Control</p>
-                        <p class="project-desc">A line-following robot using the LFBR algorithm with PID tuning for precise control.</p>
-                        <a href="https://drive.google.com/drive/folders/1mPeQnlcpO9GExifaaJFAJ70WTQ1qNEH5?usp=sharing" class="btn project-btn">View Details</a>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-categories="robotics">
-                    <div class="project-image">
-                        <img src="assets/5.jpeg" alt="e-Yantra Logistics CoBot">
-                    </div>
-                    <div class="project-info">
-                        <h3>e-Yantra Logistics CoBot</h3>
-                        <p class="project-tags">ROS2, Gazebo, MoveIt!, OpenCV, ArUco Markers</p>
-                        <p class="project-desc">An autonomous robotic system for warehouse logistics using ROS2 and Gazebo.</p>
-                        <a href="https://github.com/eYantra-Robotics-Competition/eyrc-24-25-logistic-cobot" class="btn project-btn">View Details</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <!-- Elevator Pitch -->
+            <p class="text-base text-muted-foreground leading-relaxed pt-2">
+              Architecting high concurrency <span class="text-accent-brand font-semibold">distributed systems</span> and high throughput backend engines. Currently focused on <span class="text-accent-brand font-semibold">custom wire protocols</span>, storage engines, and recommendation systems.
+            </p>
 
-        <section id="skills" class="skills">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Operating Systems</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-linux"></i>
-                            <span>Linux (Ubuntu)</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-windows"></i>
-                            <span>Windows</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-icon">C</span>
-                            <span>C</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">C++</span>
-                            <span>C++</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Developer Tools</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>VS Code</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git/GitHub</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-cloud"></i>
-                            <span>Google Colab</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Technologies/Frameworks</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-calculator"></i>
-                            <span>NumPy</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-table"></i>
-                            <span>Pandas</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-microchip"></i>
-                            <span>ESP-IDF</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
 
-        <section id="experience" class="experience">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="timeline-content">
-                    <h3>Society of Robotics and Automation (SRA), VJTI</h3>
-                    <p class="timeline-date">May 2024 - Present</p>
-                    <p class="timeline-role">SY Active Member</p>
-                    <ul class="timeline-achievements">
-                        <li>Working on the Gyroglider project under the Eklavya Mentorship Program</li>
-                        <li>Volunteered in organizing and conducting workshops for 150+ first-year students</li>
-                        <li>Taught topics like Motor driver and line following in Wall-E</li>
-                    </ul>
-                    <a href="https://sravjti.in/" target="_blank" class="btn secondary small">Visit SRA Website</a>
-                </div>
+          <!-- Avatar -->
+          <div class="flex-shrink-0 flex justify-center md:justify-end">
+            <div class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-2 border-border/80 avatar-glow bg-neutral-900">
+              <img src="assets/soham.png" alt="Soham Kute" class="w-full h-full object-cover">
             </div>
-            <div class="timeline-item">
-                <div class="timeline-icon">
-                <i class="fas fa-code"></i>
-                </div>
-                <div class="timeline-content">
-                <h3>Google Summer of Code (GSoC) Proposal - VideoLAN</h3>
-                <p class="timeline-date">Ongoing</p>
-                <p class="timeline-role">Contributor</p>
-                <ul class="timeline-achievements">
-                    <li>Submitted a GSoC proposal to VideoLAN organization</li>
-                    <li>Working on DAV1D RISC-V optimizations to enhance video decoding performance</li>
-                    <li>Collaborating with mentors to refine and implement the proposal</li>
-                </ul>
-                <a href="https://www.videolan.org/" target="_blank" class="btn secondary small">VideoLAN Website</a>
-                </div>
+          </div>
+
+        </div>
+
+        <!-- Building Status Card -->
+        <div class="flex items-center gap-3.5 p-3.5 rounded-xl border border-border bg-card/60 backdrop-blur-sm text-xs font-mono text-muted-foreground">
+          <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-accent-brand/10 text-accent-brand flex-shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+          <div class="flex-1 truncate">
+            <div class="text-[10px] tracking-wider uppercase text-muted-foreground/70">Currently Building</div>
+            <div class="text-foreground font-semibold truncate">echo-log &mdash; Distributed commit log broker from raw Java NIO selectors</div>
+          </div>
+          <a href="https://github.com/sohamukute/echo-log" target="_blank" class="px-2.5 py-1 rounded-md bg-secondary hover:bg-secondary/80 text-foreground text-[11px] font-semibold transition-colors flex-shrink-0">
+            View &rarr;
+          </a>
+        </div>
+      </section>
+
+      <!-- ==================== CONNECT WITH ME ==================== -->
+      <section class="space-y-4">
+        <h2 class="relative flex items-center gap-3 pl-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+          <span class="absolute left-0 top-1/2 h-3.5 w-0.5 -translate-y-1/2 bg-accent-brand"></span>
+          Connect With Me
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          
+          <!-- Email -->
+          <a href="mailto:officialsohamkute@gmail.com" class="group flex items-center justify-between p-3.5 rounded-xl border border-border bg-card hover:border-accent-brand/40 hover:bg-card/80 transition-all">
+            <div class="flex items-center gap-3">
+              <div class="p-2 rounded-lg bg-secondary text-muted-foreground group-hover:text-accent-brand transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              </div>
+              <div>
+                <div class="text-xs font-semibold text-foreground">Email</div>
+                <div class="text-xs text-muted-foreground font-mono">officialsohamkute@gmail.com</div>
+              </div>
+            </div>
+            <span class="text-muted-foreground group-hover:text-accent-brand transition-colors">&nearr;</span>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/sohamukute" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3.5 rounded-xl border border-border bg-card hover:border-accent-brand/40 hover:bg-card/80 transition-all">
+            <div class="flex items-center gap-3">
+              <div class="p-2 rounded-lg bg-secondary text-muted-foreground group-hover:text-accent-brand transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs font-semibold text-foreground">GitHub</div>
+                <div class="text-xs text-muted-foreground font-mono">sohamukute</div>
+              </div>
+            </div>
+            <span class="text-muted-foreground group-hover:text-accent-brand transition-colors">&nearr;</span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/sohamukute/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3.5 rounded-xl border border-border bg-card hover:border-accent-brand/40 hover:bg-card/80 transition-all">
+            <div class="flex items-center gap-3">
+              <div class="p-2 rounded-lg bg-secondary text-muted-foreground group-hover:text-accent-brand transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs font-semibold text-foreground">LinkedIn</div>
+                <div class="text-xs text-muted-foreground font-mono">sohamukute</div>
+              </div>
+            </div>
+            <span class="text-muted-foreground group-hover:text-accent-brand transition-colors">&nearr;</span>
+          </a>
+
+          <!-- X / Twitter -->
+          <a href="https://x.com/sohamukute" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3.5 rounded-xl border border-border bg-card hover:border-accent-brand/40 hover:bg-card/80 transition-all">
+            <div class="flex items-center gap-3">
+              <div class="p-2 rounded-lg bg-secondary text-muted-foreground group-hover:text-accent-brand transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs font-semibold text-foreground">X (Twitter)</div>
+                <div class="text-xs text-muted-foreground font-mono">@sohamukute</div>
+              </div>
+            </div>
+            <span class="text-muted-foreground group-hover:text-accent-brand transition-colors">&nearr;</span>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- ==================== WORK & LEADERSHIP ==================== -->
+      <section id="work" class="space-y-4">
+        <h2 class="relative flex items-center gap-3 pl-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+          <span class="absolute left-0 top-1/2 h-3.5 w-0.5 -translate-y-1/2 bg-accent-brand"></span>
+          Work &amp; Leadership
+        </h2>
+
+        <div class="space-y-4">
+
+          <!-- SRA VJTI Card -->
+          <div class="group/card rounded-xl border border-border bg-card p-5 transition-all hover:border-border/80">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-3">
+              <div>
+                <h3 class="text-base font-semibold text-foreground">Society of Robotics and Automation (SRA), VJTI</h3>
+                <div class="text-xs font-mono text-accent-brand font-medium">Systems &amp; Autonomous Robotics Mentor</div>
+              </div>
+              <div class="text-xs font-mono text-muted-foreground sm:text-right">
+                May 2024 &mdash; Present<br>
+                <span class="text-[11px] text-muted-foreground/70">Mumbai, India</span>
+              </div>
             </div>
             
-        </section>
+            <p class="text-xs text-muted-foreground leading-relaxed mb-4">
+              Mentoring 150+ student engineers in low level systems programming, embedded firmware, and autonomous robotics. Developed control software and state estimation for the Gyroglider rough terrain robotics platform and the Ballerina Cappucina omnidirectional robot.
+            </p>
 
-        <section id="blog" class="blog">
-            <h2 class="section-title">Blog</h2>
-            <div class="blog-content">
-                <div class="blog-coming-soon">
-                    <i class="fas fa-pen-fancy"></i>
-                    <h3>Coming Soon!</h3>
-                    <p>I'll be sharing my insights, learning experiences, and technical knowledge here soon. Stay tuned!</p>
-                </div>
-                <div class="blog-topics">
-                    <h3>Topics I'll Be Covering</h3>
-                    <div class="topic-tags">
-                        <span class="topic-tag">Embedded Systems</span>
-                        <span class="topic-tag">Robotics</span>
-                        <span class="topic-tag">Control Systems</span>
-                        <span class="topic-tag">Aerospace Engineering</span>
-                        <span class="topic-tag">Electronics</span>
-                        <span class="topic-tag">Programming</span>
-                    </div>
-                </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">C++</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Java</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">ROS</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Linux</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Control Systems</span>
             </div>
-        </section>
+          </div>
 
-        <section id="contact" class="contact">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Let's Connect!</h3>
-                    <p>I'm always excited to connect with like-minded individuals, potential collaborators, or anyone interested in technology and engineering. Whether you have a project idea, job opportunity, or just want to say hello, feel free to reach out!</p>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <div class="method-details">
-                                <h4>Email</h4>
-                                <a href="mailto:officialsohamkute@gmail.com">officialsohamkute@gmail.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <i class="fas fa-phone"></i>
-                            <div class="method-details">
-                                <h4>Phone</h4>
-                                <a href="tel:+918799906942">+91 8799906942</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="method-details">
-                                <h4>Location</h4>
-                                <p>Mumbai, Maharashtra, India</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links contact-social">
-                        <a href="https://www.linkedin.com/in/sohamukute/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/sohamukute" target="_blank" class="social-icon github" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://instagram.com/soham_kute" target="_blank" class="social-icon instagram" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/xzzeyywe" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn primary">Send Message</button>
-                    </form>
-                </div>
+          <!-- Open Source Contributor -->
+          <div class="group/card rounded-xl border border-border bg-card p-5 transition-all hover:border-border/80">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-3">
+              <div>
+                <h3 class="text-base font-semibold text-foreground">Open Source Ecosystem</h3>
+                <div class="text-xs font-mono text-accent-brand font-medium">Upstream Core Contributor</div>
+              </div>
+              <div class="text-xs font-mono text-muted-foreground sm:text-right">
+                2025 &mdash; Present<br>
+                <span class="text-[11px] text-muted-foreground/70">Global / Remote</span>
+              </div>
             </div>
-        </section>
+            
+            <p class="text-xs text-muted-foreground leading-relaxed mb-4">
+              Merged upstream contributions across major open source platforms: mDNS goodbye packet detection per RFC 6762 in <code class="text-foreground">libmicrodns</code> (#53); H.261 encoder/parser API tests and APV profile format memory leak fixes in <code class="text-foreground">FFmpeg</code> (#22237, #22693); and array indexing optimization in <code class="text-foreground">shap</code> (#4362).
+            </p>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">C</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">C++</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Python</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Git</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Networking</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== FEATURED PROJECTS ==================== -->
+      <!-- Strictly Java projects + feedrank as requested -->
+      <section id="projects" class="space-y-4">
+        <h2 class="relative flex items-center gap-3 pl-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+          <span class="absolute left-0 top-1/2 h-3.5 w-0.5 -translate-y-1/2 bg-accent-brand"></span>
+          Featured Projects
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <!-- Project 1: echo-log (Java 21) -->
+          <div class="group/card flex flex-col justify-between rounded-xl border border-border bg-card p-4 sm:p-5 transition-all hover:border-accent-brand/40 hover:shadow-lg hover:shadow-accent-brand/5">
+            <div>
+              <div class="relative w-full aspect-3/2 rounded-lg overflow-hidden mb-4 border border-border/80 bg-neutral-950">
+                <img src="images/project-echolog.svg" alt="echo-log" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/card:scale-105">
+              </div>
+              <div class="flex items-center justify-between mb-2.5">
+                <h3 class="text-lg font-semibold text-foreground group-hover/card:text-accent-brand transition-colors">
+                  echo-log
+                </h3>
+                <a href="https://github.com/sohamukute/echo-log" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground transition-colors p-1" aria-label="GitHub Repository">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+              <p class="text-xs text-muted-foreground leading-relaxed mb-4">
+                A distributed log broker inspired by Apache Kafka, built from raw Java NIO selectors. Features append only segment files, offset indexed lookups, a custom binary wire protocol, consumer group rebalancing, and ZooKeeper leader election.
+              </p>
+            </div>
+
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Java 21</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Java NIO</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">ZooKeeper</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Docker</span>
+              </div>
+              <div class="flex items-center justify-between pt-3 border-t border-border/50 text-xs">
+                <span class="text-emerald-500 font-mono flex items-center gap-1.5 text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Completed
+                </span>
+                <a href="https://github.com/sohamukute/echo-log" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground font-semibold flex items-center gap-1 transition-colors">
+                  View Source &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: grabmyseat (Java / Spring Boot) -->
+          <div class="group/card flex flex-col justify-between rounded-xl border border-border bg-card p-4 sm:p-5 transition-all hover:border-accent-brand/40 hover:shadow-lg hover:shadow-accent-brand/5">
+            <div>
+              <div class="relative w-full aspect-3/2 rounded-lg overflow-hidden mb-4 border border-border/80 bg-neutral-950">
+                <img src="images/project-grabmyseat.svg" alt="grabmyseat" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/card:scale-105">
+              </div>
+              <div class="flex items-center justify-between mb-2.5">
+                <h3 class="text-lg font-semibold text-foreground group-hover/card:text-accent-brand transition-colors">
+                  grabmyseat
+                </h3>
+                <a href="https://github.com/sohamukute/grabmyseat" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground transition-colors p-1" aria-label="GitHub Repository">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+              <p class="text-xs text-muted-foreground leading-relaxed mb-4">
+                High concurrency ticket booking and payments engine designed to protect finite seat inventory from overselling during flash sales. Seven microservices with ordered Redisson locks, atomic Redis reservations, and a distributed Saga orchestrator.
+              </p>
+            </div>
+
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Java 21</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Spring Boot 3</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Redis</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">PostgreSQL</span>
+              </div>
+              <div class="flex items-center justify-between pt-3 border-t border-border/50 text-xs">
+                <span class="text-emerald-500 font-mono flex items-center gap-1.5 text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Completed
+                </span>
+                <a href="https://github.com/sohamukute/grabmyseat" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground font-semibold flex items-center gap-1 transition-colors">
+                  View Source &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: feedrank (Requested by user) -->
+          <div class="group/card flex flex-col justify-between rounded-xl border border-border bg-card p-4 sm:p-5 transition-all hover:border-accent-brand/40 hover:shadow-lg hover:shadow-accent-brand/5">
+            <div>
+              <div class="relative w-full aspect-3/2 rounded-lg overflow-hidden mb-4 border border-border/80 bg-neutral-950">
+                <img src="images/project-feedrank.svg" alt="feedrank" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/card:scale-105">
+              </div>
+              <div class="flex items-center justify-between mb-2.5">
+                <h3 class="text-lg font-semibold text-foreground group-hover/card:text-accent-brand transition-colors">
+                  feedrank
+                </h3>
+                <a href="https://github.com/sohamukute/feedrank" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground transition-colors p-1" aria-label="GitHub Repository">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+              <p class="text-xs text-muted-foreground leading-relaxed mb-4">
+                Two stage recommendation engine trained on 54 million Amazon review interactions across 6.1 million users and 1.2 million items. ALS matrix factorization retrieves candidates from a FAISS index, while LightGBM re ranks them in 2 to 4 milliseconds.
+              </p>
+            </div>
+
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Python</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">FAISS</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">LightGBM</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">DuckDB</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">FastAPI</span>
+              </div>
+              <div class="flex items-center justify-between pt-3 border-t border-border/50 text-xs">
+                <span class="text-emerald-500 font-mono flex items-center gap-1.5 text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Completed
+                </span>
+                <a href="https://github.com/sohamukute/feedrank" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground font-semibold flex items-center gap-1 transition-colors">
+                  View Source &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: daakdash (Java / Spring Boot) -->
+          <div class="group/card flex flex-col justify-between rounded-xl border border-border bg-card p-4 sm:p-5 transition-all hover:border-accent-brand/40 hover:shadow-lg hover:shadow-accent-brand/5">
+            <div>
+              <div class="relative w-full aspect-3/2 rounded-lg overflow-hidden mb-4 border border-border/80 bg-neutral-950">
+                <img src="images/project-daakdash.svg" alt="daakdash" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/card:scale-105">
+              </div>
+              <div class="flex items-center justify-between mb-2.5">
+                <h3 class="text-lg font-semibold text-foreground group-hover/card:text-accent-brand transition-colors">
+                  daakdash
+                </h3>
+                <a href="https://github.com/sohamukute/daakdash" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground transition-colors p-1" aria-label="GitHub Repository">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+              <p class="text-xs text-muted-foreground leading-relaxed mb-4">
+                Depot to door courier logistics platform designed around an auditable parcel state machine with optimistic concurrency, JWT gateway routing, Redis rate limiting, and distance based delivery partner assignment.
+              </p>
+            </div>
+
+            <div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Java 21</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Spring Boot 3</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">PostgreSQL</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-secondary text-secondary-foreground">Redis</span>
+              </div>
+              <div class="flex items-center justify-between pt-3 border-t border-border/50 text-xs">
+                <span class="text-emerald-500 font-mono flex items-center gap-1.5 text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Completed
+                </span>
+                <a href="https://github.com/sohamukute/daakdash" target="_blank" rel="noopener noreferrer" class="text-muted-foreground hover:text-foreground font-semibold flex items-center gap-1 transition-colors">
+                  View Source &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== LEARNING & FIELD NOTES (EXTENSION) ==================== -->
+      <!-- User explicitly requested: "and add lern here" -->
+      <section id="learning" class="space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="relative flex items-center gap-3 pl-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+            <span class="absolute left-0 top-1/2 h-3.5 w-0.5 -translate-y-1/2 bg-accent-brand"></span>
+            Learning &amp; Field Notes
+          </h2>
+          <a href="/learn/" class="text-xs font-mono text-accent-brand hover:underline font-semibold">
+            Open /learn/ &rarr;
+          </a>
+        </div>
+
+        <div class="rounded-xl border border-border bg-card p-6 space-y-6">
+          <div class="space-y-2">
+            <h3 class="text-xl font-semibold text-foreground">
+              Java &amp; Distributed Systems Engineering Field Notes
+            </h3>
+            <p class="text-xs text-muted-foreground leading-relaxed">
+              My comprehensive, personal reference manual covering backend engineering from runtime fundamentals to distributed scale. 137 exhaustive chapters synthesized from first principles with zero hyphens and clean mental models.
+            </p>
+          </div>
+
+          <!-- 4 Tracks Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            
+            <a href="/learn/java/" class="group p-3.5 rounded-lg border border-border/60 bg-secondary/40 hover:bg-secondary hover:border-accent-brand/40 transition-all flex items-center justify-between">
+              <div>
+                <div class="text-xs font-semibold text-foreground group-hover:text-accent-brand transition-colors">01. Core Java</div>
+                <div class="text-[11px] text-muted-foreground font-mono">52 Chapters &bull; JVM to Modern Java 21</div>
+              </div>
+              <span class="text-xs text-muted-foreground group-hover:text-accent-brand transition-colors">&rarr;</span>
+            </a>
+
+            <a href="/learn/spring-boot/" class="group p-3.5 rounded-lg border border-border/60 bg-secondary/40 hover:bg-secondary hover:border-accent-brand/40 transition-all flex items-center justify-between">
+              <div>
+                <div class="text-xs font-semibold text-foreground group-hover:text-accent-brand transition-colors">02. Spring Boot</div>
+                <div class="text-[11px] text-muted-foreground font-mono">44 Lectures &bull; IoC, JPA, JWT &amp; Security</div>
+              </div>
+              <span class="text-xs text-muted-foreground group-hover:text-accent-brand transition-colors">&rarr;</span>
+            </a>
+
+            <a href="/learn/microservices/" class="group p-3.5 rounded-lg border border-border/60 bg-secondary/40 hover:bg-secondary hover:border-accent-brand/40 transition-all flex items-center justify-between">
+              <div>
+                <div class="text-xs font-semibold text-foreground group-hover:text-accent-brand transition-colors">03. Microservices</div>
+                <div class="text-[11px] text-muted-foreground font-mono">22 Lectures &bull; Eureka, Resilience4j, ShedLock</div>
+              </div>
+              <span class="text-xs text-muted-foreground group-hover:text-accent-brand transition-colors">&rarr;</span>
+            </a>
+
+            <a href="/learn/junit-mockito/" class="group p-3.5 rounded-lg border border-border/60 bg-secondary/40 hover:bg-secondary hover:border-accent-brand/40 transition-all flex items-center justify-between">
+              <div>
+                <div class="text-xs font-semibold text-foreground group-hover:text-accent-brand transition-colors">04. JUnit 5 &amp; Mockito</div>
+                <div class="text-[11px] text-muted-foreground font-mono">19 Lectures &bull; Unit Testing &amp; Mocking</div>
+              </div>
+              <span class="text-xs text-muted-foreground group-hover:text-accent-brand transition-colors">&rarr;</span>
+            </a>
+
+          </div>
+
+          <!-- Bottom Action -->
+          <div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t border-border/50 text-xs">
+            <span class="text-muted-foreground font-mono">137 in depth chapters &bull; Built with VitePress</span>
+            <a href="/learn/" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-foreground text-background font-semibold hover:bg-accent-brand hover:text-foreground transition-all">
+              <span>Read Full Notes Platform</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== GITHUB ACTIVITY ==================== -->
+      <section class="space-y-4">
+        <h2 class="relative flex items-center gap-3 pl-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+          <span class="absolute left-0 top-1/2 h-3.5 w-0.5 -translate-y-1/2 bg-accent-brand"></span>
+          GitHub Activity
+        </h2>
+
+        <div class="rounded-xl border border-border bg-card p-5 overflow-hidden">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono text-muted-foreground">Contributions on GitHub</span>
+            <a href="https://github.com/sohamukute" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-accent-brand hover:underline">
+              @sohamukute &rarr;
+            </a>
+          </div>
+          <!-- Clean Contribution Heatmap Embed -->
+          <img src="https://ghchart.rshah.org/22d3ee/sohamukute" alt="Soham Kute GitHub Contribution Chart" class="w-full h-auto filter dark:invert-[0.15] dark:brightness-110">
+        </div>
+      </section>
+
+      <!-- ==================== ABOUT ==================== -->
+      <section id="about" class="space-y-4">
+        <h2 class="relative flex items-center gap-3 pl-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+          <span class="absolute left-0 top-1/2 h-3.5 w-0.5 -translate-y-1/2 bg-accent-brand"></span>
+          About
+        </h2>
+
+        <div class="rounded-xl border border-border bg-card p-6 space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <p>
+            I&#39;m Soham Kute, a Systems and Backend Engineer based in Mumbai, currently studying Electronics Engineering with an Aerospace minor at <span class="text-foreground font-semibold">Veermata Jijabai Technological Institute (VJTI)</span> (2023&ndash;2027).
+          </p>
+          <p>
+            I focus on building resilient server side architectures from the ground up: custom network protocols with Java NIO selectors, high concurrency ticketing engines with distributed Sagas, and recommendation systems processing tens of millions of interactions.
+          </p>
+          <p>
+            Outside of backend systems, I mentor autonomous robotics at SRA VJTI, solve competitive programming challenges (LeetCode 1631, CodeChef 1610 3&star;), and contribute to open source infrastructure like FFmpeg and libmicrodns.
+          </p>
+        </div>
+      </section>
+
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">Soham Kute</div>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#blog">Blog</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="footer-social">
-                <a href="mailto:officialsohamkute@gmail.com" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/sohamukute/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/sohamukute" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://instagram.com/sohamk.9305" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Soham Kute. All rights reserved.</p>
-        </div>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="border-t border-border/40 py-8 text-center text-xs font-mono text-muted-foreground">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
+        <span>&copy; <span id="yearSpan"></span> Soham Kute &bull; VJTI Mumbai</span>
+        <span>Built with clean semantic HTML &amp; Tailwind</span>
+      </div>
     </footer>
 
-    <script src="main.js"></script>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // 1. Live IST Clock
+    function updateClock() {
+      const now = new Date();
+      const options = {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      };
+      const timeStr = now.toLocaleTimeString('en-US', options);
+      const clockEl = document.getElementById('liveClock');
+      if (clockEl) clockEl.textContent = timeStr + ' IST';
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    // 2. Dynamic Year
+    const yearEl = document.getElementById('yearSpan');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // 3. Theme Toggle (Dark / Light) with LocalStorage persistence
+    const themeBtn = document.getElementById('themeToggle');
+    const htmlEl = document.documentElement;
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        htmlEl.classList.add('dark');
+        htmlEl.classList.remove('light');
+        htmlEl.style.colorScheme = 'dark';
+      } else {
+        htmlEl.classList.remove('dark');
+        htmlEl.classList.add('light');
+        htmlEl.style.colorScheme = 'light';
+      }
+      localStorage.setItem('portfolio_theme', theme);
+    }
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('portfolio_theme') || 'dark';
+    applyTheme(savedTheme);
+
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        const isDark = htmlEl.classList.contains('dark');
+        applyTheme(isDark ? 'light' : 'dark');
+      });
+    }
+  </script>
+
 </body>
 </html>
