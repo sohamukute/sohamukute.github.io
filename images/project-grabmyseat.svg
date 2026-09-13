@@ -1,50 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="100%" height="100%">
   <defs>
-    <radialGradient id="glow" cx="80%" cy="20%" r="60%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.18" />
-      <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0" />
-    </radialGradient>
-    <linearGradient id="grid-fade" x1="0" y1="0" x2="0" y2="100%">
-      <stop offset="0%" stop-color="#262626" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#262626" stop-opacity="0.05"/>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+    <linearGradient id="glow2" cx="80%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
     </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="600" height="400" fill="#0d0d0d" />
-  <rect width="600" height="400" fill="url(#glow)" />
+  <rect width="900" height="600" fill="url(#bg2)"/>
+  <rect width="900" height="600" fill="url(#glow2)"/>
 
-  <!-- Subtle Blueprint Grid lines -->
-  <g stroke="url(#grid-fade)" stroke-width="1">
-    <line x1="60" y1="0" x2="60" y2="400" />
-    <line x1="180" y1="0" x2="180" y2="400" />
-    <line x1="300" y1="0" x2="300" y2="400" />
-    <line x1="420" y1="0" x2="420" y2="400" />
-    <line x1="540" y1="0" x2="540" y2="400" />
-    <line x1="0" y1="80" x2="600" y2="80" />
-    <line x1="0" y1="160" x2="600" y2="160" />
-    <line x1="0" y1="240" x2="600" y2="240" />
-    <line x1="0" y1="320" x2="600" y2="320" />
-  </g>
+  <g transform="translate(60, 50)">
+    <rect width="780" height="500" rx="14" fill="#0b0f19" stroke="#1f2937" stroke-width="1.5"/>
+    
+    <!-- Titlebar -->
+    <rect width="780" height="42" rx="14" fill="#111827"/>
+    <rect x="0" y="28" width="780" height="14" fill="#111827"/>
+    <line x1="0" y1="42" x2="780" y2="42" stroke="#1f2937" stroke-width="1"/>
+    
+    <circle cx="24" cy="21" r="5.5" fill="#ef4444" />
+    <circle cx="42" cy="21" r="5.5" fill="#f59e0b" />
+    <circle cx="60" cy="21" r="5.5" fill="#10b981" />
+    <text x="390" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#9ca3af">GrabMySeat • High-Demand Event Ticketing Platform</text>
 
-  <!-- Top Category Tag -->
-  <g transform="translate(48, 56)">
-    <rect width="110" height="24" rx="6" fill="#171717" stroke="#2e2e2e" stroke-width="1"/>
-    <text x="55" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="0.08em">DISTRIBUTED</text>
-  </g>
+    <!-- App Dashboard UI -->
+    <g transform="translate(30, 65)">
+      <!-- Left side: Booking Status -->
+      <g transform="translate(0, 0)">
+        <rect width="340" height="160" rx="10" fill="#131b2e" stroke="#1e293b"/>
+        <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Coldplay Live • Mumbai Arena</text>
+        <text x="20" y="55" font-family="-apple-system, sans-serif" font-size="11" fill="#94a3b8">Zone A (VIP Seating) • Finite Inventory: 5,000</text>
+        
+        <rect x="20" y="75" width="300" height="8" rx="4" fill="#1e293b"/>
+        <rect x="20" y="75" width="280" height="8" rx="4" fill="#38bdf8"/>
+        
+        <text x="20" y="110" font-family="-apple-system, sans-serif" font-size="11" fill="#cbd5e1">94% Capacity Booked</text>
+        <text x="20" y="132" font-family="'JetBrains Mono', monospace" font-size="11" fill="#10b981">• Redisson Fair Lock: 0 Oversell Guarantee</text>
+      </g>
 
-  <!-- Main Headline -->
-  <text x="48" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="900" fill="#fafafa" letter-spacing="-0.03em">
-    HIGH CONCURRENCY.
-  </text>
-  <text x="48" y="195" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="900" fill="#38bdf8" letter-spacing="-0.03em">
-    REDISSON &amp; SAGA.
-  </text>
+      <!-- Right side: Saga Pipeline -->
+      <g transform="translate(365, 0)">
+        <rect width="355" height="160" rx="10" fill="#131b2e" stroke="#1e293b"/>
+        <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#f8fafc">Distributed Saga Orchestration</text>
+        <g transform="translate(20, 55)" font-family="'JetBrains Mono', monospace" font-size="11">
+          <text x="0" y="16" fill="#38bdf8">1. Hold Seat Permit</text>
+          <text x="220" y="16" fill="#10b981">[SUCCESS]</text>
+          <text x="0" y="42" fill="#38bdf8">2. Debit User Wallet</text>
+          <text x="220" y="42" fill="#10b981">[SUCCESS]</text>
+          <text x="0" y="68" fill="#38bdf8">3. Generate Secure QR</text>
+          <text x="220" y="68" fill="#10b981">[SUCCESS]</text>
+        </g>
+      </g>
 
-  <!-- Code Hint at Bottom -->
-  <g transform="translate(48, 320)">
-    <rect width="504" height="42" rx="8" fill="#141414" stroke="#262626" stroke-width="1"/>
-    <circle cx="20" cy="21" r="4" fill="#38bdf8" />
-    <text x="36" y="26" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="500" fill="#a1a1a1">Flash Sale Queue &gt; Redisson Fair Lock &gt; Saga Orchestrator</text>
+      <!-- Bottom Interactive Seat Map Representation -->
+      <g transform="translate(0, 185)">
+        <rect width="720" height="185" rx="10" fill="#0f172a" stroke="#1e293b"/>
+        <text x="20" y="30" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#94a3b8" text-transform="uppercase" letter-spacing="0.08em">Live Stage Grid • Virtual Waiting Room Permitted</text>
+        
+        <!-- Dot Grid for Seats -->
+        <g transform="translate(30, 55)">
+          <!-- Row 1 -->
+          <circle cx="15" cy="15" r="7" fill="#38bdf8"/><circle cx="45" cy="15" r="7" fill="#38bdf8"/><circle cx="75" cy="15" r="7" fill="#ef4444"/><circle cx="105" cy="15" r="7" fill="#ef4444"/><circle cx="135" cy="15" r="7" fill="#38bdf8"/><circle cx="165" cy="15" r="7" fill="#38bdf8"/><circle cx="195" cy="15" r="7" fill="#ef4444"/><circle cx="225" cy="15" r="7" fill="#ef4444"/><circle cx="255" cy="15" r="7" fill="#38bdf8"/><circle cx="285" cy="15" r="7" fill="#38bdf8"/><circle cx="315" cy="15" r="7" fill="#ef4444"/><circle cx="345" cy="15" r="7" fill="#ef4444"/><circle cx="375" cy="15" r="7" fill="#38bdf8"/><circle cx="405" cy="15" r="7" fill="#38bdf8"/><circle cx="435" cy="15" r="7" fill="#38bdf8"/><circle cx="465" cy="15" r="7" fill="#ef4444"/><circle cx="495" cy="15" r="7" fill="#ef4444"/><circle cx="525" cy="15" r="7" fill="#38bdf8"/><circle cx="555" cy="15" r="7" fill="#38bdf8"/><circle cx="585" cy="15" r="7" fill="#38bdf8"/><circle cx="615" cy="15" r="7" fill="#ef4444"/><circle cx="645" cy="15" r="7" fill="#ef4444"/>
+          <!-- Row 2 -->
+          <circle cx="15" cy="45" r="7" fill="#ef4444"/><circle cx="45" cy="45" r="7" fill="#ef4444"/><circle cx="75" cy="45" r="7" fill="#ef4444"/><circle cx="105" cy="45" r="7" fill="#38bdf8"/><circle cx="135" cy="45" r="7" fill="#38bdf8"/><circle cx="165" cy="45" r="7" fill="#ef4444"/><circle cx="195" cy="45" r="7" fill="#ef4444"/><circle cx="225" cy="45" r="7" fill="#38bdf8"/><circle cx="255" cy="45" r="7" fill="#38bdf8"/><circle cx="285" cy="45" r="7" fill="#ef4444"/><circle cx="315" cy="45" r="7" fill="#ef4444"/><circle cx="345" cy="45" r="7" fill="#ef4444"/><circle cx="375" cy="45" r="7" fill="#38bdf8"/><circle cx="405" cy="45" r="7" fill="#38bdf8"/><circle cx="435" cy="45" r="7" fill="#ef4444"/><circle cx="465" cy="45" r="7" fill="#ef4444"/><circle cx="495" cy="45" r="7" fill="#ef4444"/><circle cx="525" cy="45" r="7" fill="#38bdf8"/><circle cx="555" cy="45" r="7" fill="#38bdf8"/><circle cx="585" cy="45" r="7" fill="#ef4444"/><circle cx="615" cy="45" r="7" fill="#ef4444"/><circle cx="645" cy="45" r="7" fill="#38bdf8"/>
+          <!-- Row 3 -->
+          <circle cx="15" cy="75" r="7" fill="#38bdf8"/><circle cx="45" cy="75" r="7" fill="#38bdf8"/><circle cx="75" cy="75" r="7" fill="#38bdf8"/><circle cx="105" cy="75" r="7" fill="#ef4444"/><circle cx="135" cy="75" r="7" fill="#ef4444"/><circle cx="165" cy="75" r="7" fill="#38bdf8"/><circle cx="195" cy="75" r="7" fill="#38bdf8"/><circle cx="225" cy="75" r="7" fill="#ef4444"/><circle cx="255" cy="75" r="7" fill="#ef4444"/><circle cx="285" cy="75" r="7" fill="#38bdf8"/><circle cx="315" cy="75" r="7" fill="#38bdf8"/><circle cx="345" cy="75" r="7" fill="#ef4444"/><circle cx="375" cy="75" r="7" fill="#ef4444"/><circle cx="405" cy="75" r="7" fill="#38bdf8"/><circle cx="435" cy="75" r="7" fill="#38bdf8"/><circle cx="465" cy="75" r="7" fill="#ef4444"/><circle cx="495" cy="75" r="7" fill="#ef4444"/><circle cx="525" cy="75" r="7" fill="#38bdf8"/><circle cx="555" cy="75" r="7" fill="#38bdf8"/><circle cx="585" cy="75" r="7" fill="#38bdf8"/><circle cx="615" cy="75" r="7" fill="#ef4444"/><circle cx="645" cy="75" r="7" fill="#ef4444"/>
+        </g>
+        
+        <text x="30" y="165" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748b">• Blue: Available • Red: Reserved in Redis • 0 oversold seats under 10k RPS</text>
+      </g>
+    </g>
   </g>
 </svg>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Soham - Backend &amp; Systems Engineer</title>
-  <meta name="description" content="Portfolio of Soham Kute, Backend and Systems Engineer at VJTI Mumbai. Creator of echo-log, GrabMySeat, and FeedRank.">
+  <meta name="description" content="Portfolio of Soham Kute, Backend and Systems Engineer focused on building scalable distributed systems, high-concurrency engines, and robust cloud infrastructure.">
   
   <!-- Preload Fonts -->
   <link rel="preload" href="fonts/797e433ab948586e-s.p.29207c2f.woff2" as="font" crossorigin type="font/woff2">
@@ -12,7 +12,7 @@
   <link rel="preload" href="fonts/Telma_Variable-s.p.219f7f2c.woff2" as="font" crossorigin type="font/woff2">
   <link rel="preload" href="fonts/caa3a2e1cccd8315-s.p.3b6cae6d.woff2" as="font" crossorigin type="font/woff2">
   
-  <!-- Stylesheet from reference -->
+  <!-- Reference Stylesheet -->
   <link href="css/6252e57c31165fc0.css" rel="stylesheet">
   
   <!-- Theme Colors -->
@@ -52,6 +52,20 @@
     html {
       scroll-behavior: smooth;
     }
+
+    /* Strict container width matching Image #1 (compact, centered, not wide) */
+    .site-container {
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+    
+    /* Avatar glowing border matching reference */
+    .avatar-ring {
+      box-shadow: 0 0 35px -5px rgba(34, 211, 238, 0.25);
+    }
   </style>
 </head>
 
@@ -59,7 +73,7 @@
 
   <!-- ==================== HEADER ==================== -->
   <header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
-    <div class="mx-auto flex h-14 w-full max-w-3xl items-center justify-between px-4 sm:px-6">
+    <div class="site-container flex h-14 items-center justify-between">
       
       <!-- Minimalist Logo matching n. in Telma font -->
       <a href="#" class="font-telma text-3xl font-bold tracking-tight text-foreground transition-opacity hover:opacity-80">
@@ -67,8 +81,8 @@
       </a>
 
       <!-- Nav Links -->
-      <div class="flex items-center gap-5 sm:gap-7">
-        <nav class="flex items-center gap-5 sm:gap-7 text-sm">
+      <div class="flex items-center gap-5 sm:gap-6">
+        <nav class="flex items-center gap-5 sm:gap-6 text-sm">
           <a class="relative py-1 font-semibold transition-colors text-muted-foreground hover:text-foreground" href="#extracurricular">
             Activities
           </a>
@@ -79,10 +93,13 @@
             <span class="inline-block w-1.5 h-1.5 rounded-full bg-accent-brand animate-pulse"></span>
             Learn
           </a>
-          <a class="relative py-1 font-semibold transition-colors text-muted-foreground hover:text-foreground" href="#about">
-            About
-          </a>
         </nav>
+
+        <!-- Search button pill (Ctrl K) -->
+        <a href="#learning" class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-800 text-xs font-mono text-muted-foreground hover:text-foreground transition-colors">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Ctrl K</span>
+        </a>
 
         <!-- Dark / Light Theme Toggle -->
         <button id="themeToggle" class="inline-flex items-center justify-center p-2 rounded-lg text-muted-foreground hover:text-foreground transition-colors cursor-pointer" aria-label="Toggle theme">
@@ -106,14 +123,14 @@
     </div>
   </header>
 
-  <!-- ==================== MAIN CONTAINER ==================== -->
-  <div class="mx-auto flex min-h-dvh w-full flex-col max-w-3xl px-4 sm:px-6">
-    <main class="flex flex-1 flex-col pt-8 pb-16 space-y-12">
+  <!-- ==================== MAIN CONTAINER (max-w-[680px]) ==================== -->
+  <div class="site-container flex flex-1 flex-col pt-8 pb-16 space-y-12">
+    <main class="flex flex-col space-y-12">
 
-      <!-- ==================== HERO SECTION (No Photo) ==================== -->
-      <section class="space-y-6 pt-4 pb-2">
+      <!-- ==================== HERO SECTION ==================== -->
+      <section class="space-y-6 pt-2 pb-2">
         
-        <!-- Availability Pill matching reference -->
+        <!-- Availability Pill -->
         <div>
           <div class="group relative inline-flex items-center w-fit gap-2 px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-[10px] font-mono uppercase tracking-wider overflow-hidden transition-all duration-300 ease-out hover:-translate-y-px hover:border-neutral-300 dark:hover:border-neutral-700 cursor-default">
             <span class="relative flex h-2 w-2">
@@ -121,62 +138,74 @@
               <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
             <span class="text-neutral-600 dark:text-neutral-400 font-semibold">
-              Available for work
-            </span>
-            <span class="text-neutral-400 dark:text-neutral-500">
-              &bull; Let&#39;s build something cool ✨
+              AVAILABLE FOR WORK
             </span>
           </div>
         </div>
 
-        <!-- Name & Subtitle -->
-        <div class="space-y-1">
-          <h1 class="text-7xl md:text-8xl font-ds font-extrabold text-neutral-900 dark:text-neutral-50 leading-[0.85]">
-            soham<span class="text-accent-brand">.</span>
-          </h1>
-          <p class="text-lg sm:text-xl text-neutral-500 dark:text-neutral-400 font-medium tracking-tight pt-2 font-mono">
-            Backend &amp; Systems Engineer
-          </p>
-        </div>
-
-        <!-- Location & Live Clock -->
-        <div class="flex items-center gap-3 text-[11px] font-mono uppercase tracking-[0.2em] text-neutral-400 dark:text-neutral-500">
-          <div class="flex items-center gap-1.5">
-            <svg style="width:13px; height:13px; min-width:13px; display:inline-block; vertical-align:text-bottom;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            <span>Mumbai, India</span>
+        <!-- Name + Avatar Flex Row -->
+        <div class="flex items-start justify-between gap-4">
+          <div class="space-y-1.5">
+            <h1 class="text-6xl sm:text-7xl font-ds font-extrabold text-neutral-900 dark:text-neutral-50 leading-[0.85]">
+              soham<span class="text-accent-brand">.</span>
+            </h1>
+            <p class="text-base sm:text-lg text-neutral-500 dark:text-neutral-400 font-mono tracking-tight pt-1">
+              Backend &amp; Systems Engineer
+            </p>
+            <!-- Location & Live Clock -->
+            <div class="flex items-center gap-2.5 text-[11px] font-mono uppercase tracking-[0.18em] text-neutral-400 dark:text-neutral-500 pt-1">
+              <svg style="width:12px; height:12px; min-width:12px; display:inline-block; vertical-align:text-bottom;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>MUMBAI, INDIA</span>
+              <span>/</span>
+              <span id="liveClock">--:--:-- --</span>
+            </div>
           </div>
-          <span>/</span>
-          <span id="liveClock">--:--:-- --</span>
+
+          <!-- Circular Stylized Avatar Portrait with subtle cyan glow matching Image #1 -->
+          <div class="relative shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-neutral-200 dark:border-neutral-800 bg-neutral-900 avatar-ring">
+            <img src="assets/soham.png" alt="Soham Kute" class="w-full h-full object-cover grayscale contrast-125 brightness-95">
+          </div>
         </div>
 
-        <!-- Subtle Divider Line matching reference -->
-        <div class="h-px w-full bg-neutral-200 dark:bg-neutral-800 my-4"></div>
-
-        <!-- Bio Paragraph matching reference wording & cyan highlights -->
-        <p class="text-base text-muted-foreground leading-relaxed">
-          Architecting scalable <span class="text-accent-brand font-semibold">distributed systems</span> and <span class="text-accent-brand font-semibold">high performance backends</span>. Currently obsessed with <span class="text-accent-brand font-semibold">System Design</span>, Custom Wire Protocols, and Distributed Computing.
+        <!-- Bio Paragraph with vibrant cyan highlights -->
+        <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
+          Engineering scalable distributed systems and high performance backends. Currently deep into <span class="text-accent-brand font-semibold">System Design</span> and <span class="text-accent-brand font-semibold">Distributed Systems</span>.
         </p>
 
-        <!-- Spotify / Currently Building Widget matching reference -->
-        <div class="group relative p-4 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-900/30 flex items-center justify-between gap-4 transition-all duration-300 hover:border-neutral-300 dark:hover:border-neutral-700">
-          <div class="flex items-center gap-4 min-w-0">
-            <div class="relative shrink-0 flex items-center justify-center w-12 h-12 bg-neutral-200 dark:bg-neutral-800 rounded-xl overflow-hidden shadow-sm transition-transform duration-300 group-hover:scale-105">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-brand">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-              </svg>
+        <!-- Three Action Buttons (Matching Image #1) -->
+        <div class="flex flex-wrap items-center gap-3 pt-1">
+          <a href="#projects" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold transition-all shadow-sm hover:opacity-90" style="background: #fafafa !important; color: #0a0a0a !important;">
+            <span style="color: #0a0a0a !important;">View projects</span>
+            <span style="color: #0a0a0a !important;">&nearr;</span>
+          </a>
+          <a href="mailto:officialsohamkute@gmail.com" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold border border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800 transition-all">
+            <span>Email me</span>
+          </a>
+          <a href="/learn/" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold border border-neutral-700 bg-neutral-900 text-neutral-200 hover:bg-neutral-800 transition-all">
+            <span>Field Notes</span>
+            <span class="text-xs">&nearr;</span>
+          </a>
+        </div>
+
+        <!-- Spotify / Now Playing Widget (Exact replica from Image #1) -->
+        <div class="group relative p-3.5 sm:p-4 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-900/30 flex items-center justify-between gap-3 transition-all duration-300 hover:border-neutral-300 dark:hover:border-neutral-700">
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div class="relative shrink-0 overflow-hidden shadow-sm rounded-xl" style="width: 46px; height: 46px; min-width: 46px; max-width: 46px;">
+              <img src="images/spotify-cover.svg" alt="Cover" style="width: 46px; height: 46px; display: block; object-fit: cover;">
             </div>
             <div class="min-w-0 flex-1">
-              <div class="text-[10px] font-mono font-bold tracking-[0.2em] text-neutral-400 dark:text-neutral-500 uppercase">Currently Building</div>
-              <h3 class="text-sm font-bold text-neutral-900 dark:text-neutral-100 truncate">echo-log</h3>
-              <p class="text-xs text-neutral-500 dark:text-neutral-400 font-medium truncate">Kafka inspired log broker in raw Java NIO</p>
+              <div class="flex items-center gap-1.5 text-[10px] font-mono font-bold tracking-[0.18em] text-emerald-500 uppercase">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                NOW PLAYING ♫
+              </div>
+              <h3 class="text-xs sm:text-sm font-bold text-neutral-900 dark:text-neutral-100 truncate">Kamasatu</h3>
+              <p class="text-[11px] text-neutral-500 dark:text-neutral-400 font-medium truncate">by Aastha Gill, Sachin Sanghvi, Jigar Saraiya</p>
             </div>
           </div>
-          <a href="https://github.com/sohamukute/echo-log" target="_blank" rel="noopener noreferrer" class="shrink-0 text-xs font-mono font-semibold text-accent-brand hover:underline">
-            View repo &rarr;
-          </a>
+          <svg class="w-5 h-5 text-neutral-400 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.484 17.306c-.216.353-.674.468-1.027.252-2.812-1.718-6.352-2.107-10.523-1.155-.403.092-.807-.156-.899-.56-.092-.403.156-.807.56-.899 4.568-1.044 8.487-.6 11.637 1.335.353.216.468.674.252 1.027zm1.464-3.262c-.272.443-.853.585-1.296.313-3.219-1.978-8.127-2.55-11.935-1.393-.498.151-1.03-.135-1.181-.633-.151-.498.135-1.03.633-1.181 4.354-1.321 9.771-.682 13.466 1.598.443.272.585.853.313 1.296zm.126-3.41c-3.859-2.292-10.228-2.503-13.905-1.387-.593.18-1.223-.157-1.403-.75-.18-.593.157-1.223.75-1.403 4.232-1.285 11.267-1.035 15.688 1.587.534.317.708 1.01.391 1.544-.317.534-1.01.708-1.544.391z"/></svg>
         </div>
 
       </section>
@@ -184,8 +213,8 @@
       <!-- ==================== CONNECT WITH ME ==================== -->
       <section class="space-y-4">
         <h2 class="group relative flex items-center gap-3 pl-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
-          <span aria-hidden="true" class="absolute left-0 top-1/2 h-4 w-0.5 -translate-y-1/2 rounded-full bg-accent-brand"></span>
-          Connect with me
+          <span aria-hidden="true" class="absolute left-0 top-1/2 h-3.5 w-0.5 -translate-y-1/2 rounded-full bg-accent-brand"></span>
+          CONNECT WITH ME
         </h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -198,7 +227,7 @@
               </div>
               <div>
                 <div class="text-xs font-semibold text-foreground">Email</div>
-                <div class="text-xs text-muted-foreground font-mono">officialsohamkute@gmail.com</div>
+                <div class="text-[11px] text-muted-foreground font-mono">officialsohamkute@gmail.com</div>
               </div>
             </div>
             <span class="text-muted-foreground group-hover:text-accent-brand transition-colors text-sm">&nearr;</span>
@@ -212,7 +241,21 @@
               </div>
               <div>
                 <div class="text-xs font-semibold text-foreground">GitHub</div>
-                <div class="text-xs text-muted-foreground font-mono">sohamukute</div>
+                <div class="text-[11px] text-muted-foreground font-mono">sohamukute</div>
+              </div>
+            </div>
+            <span class="text-muted-foreground group-hover:text-accent-brand transition-colors text-sm">&nearr;</span>
+          </a>
+
+          <!-- X (Twitter) -->
+          <a href="https://x.com/sohamukute" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-card hover:border-accent-brand/40 hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-all">
+            <div class="flex items-center gap-3">
+              <div class="p-2 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-muted-foreground group-hover:text-accent-brand transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </div>
+              <div>
+                <div class="text-xs font-semibold text-foreground">X (Twitter)</div>
+                <div class="text-[11px] text-muted-foreground font-mono">@sohamukute</div>
               </div>
             </div>
             <span class="text-muted-foreground group-hover:text-accent-brand transition-colors text-sm">&nearr;</span>
@@ -226,21 +269,7 @@
               </div>
               <div>
                 <div class="text-xs font-semibold text-foreground">LinkedIn</div>
-                <div class="text-xs text-muted-foreground font-mono">sohamukute</div>
-              </div>
-            </div>
-            <span class="text-muted-foreground group-hover:text-accent-brand transition-colors text-sm">&nearr;</span>
-          </a>
-
-          <!-- X / Twitter -->
-          <a href="https://x.com/sohamukute" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-card hover:border-accent-brand/40 hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-all">
-            <div class="flex items-center gap-3">
-              <div class="p-2 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-muted-foreground group-hover:text-accent-brand transition-colors">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </div>
-              <div>
-                <div class="text-xs font-semibold text-foreground">X (Twitter)</div>
-                <div class="text-xs text-muted-foreground font-mono">@sohamukute</div>
+                <div class="text-[11px] text-muted-foreground font-mono">sohamukute</div>
               </div>
             </div>
             <span class="text-muted-foreground group-hover:text-accent-brand transition-colors text-sm">&nearr;</span>
@@ -249,328 +278,374 @@
         </div>
       </section>
 
-      <!-- ==================== EXTRACURRICULAR (Replaces Work as requested) ==================== -->
-      <!-- User explicitly requested: "show projects no experience show extraciricular in that sra nad tpo cr" -->
+      <!-- ==================== EXTRACURRICULAR & LEADERSHIP (No Experience) ==================== -->
       <section id="extracurricular" class="space-y-6">
-        <h2 class="group relative flex items-center gap-3 pl-3 text-base font-mono uppercase tracking-widest text-muted-foreground">
-          <span aria-hidden="true" class="absolute left-0 top-1/2 h-4 w-0.5 -translate-y-1/2 rounded-full bg-accent-brand"></span>
-          Extracurricular &amp; Leadership
+        <h2 class="group relative flex items-center gap-3 pl-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+          <span aria-hidden="true" class="absolute left-0 top-1/2 h-3.5 w-0.5 -translate-y-1/2 rounded-full bg-accent-brand"></span>
+          EXTRACURRICULAR &amp; LEADERSHIP
         </h2>
 
         <div class="space-y-6">
 
-          <!-- Card 1: SRA VJTI -->
-          <section class="group/card flex flex-col h-full pb-6 border-b border-border/40">
-            <main class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between pl-2">
+          <!-- Card 1: SRA VJTI (Exact layout from Image #1) -->
+          <div class="group/card flex flex-col h-full pb-6 border-b border-border/40">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pl-1">
               <div class="flex items-center gap-4">
-                <div class="relative flex items-center justify-center overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-950 w-14 h-14 shrink-0 shadow-sm transition-all duration-300 group-hover/card:border-accent-brand/40">
+                <div class="relative flex items-center justify-center overflow-hidden rounded-xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 w-12 h-12 shrink-0 shadow-sm transition-all duration-300 group-hover/card:border-accent-brand/40">
                   <span class="font-mono font-bold text-sm text-foreground">SRA</span>
                 </div>
-                <div class="flex flex-col">
-                  <h3 class="text-lg font-semibold text-foreground">Society of Robotics &amp; Automation (SRA), VJTI</h3>
-                  <p class="text-sm font-medium text-accent-brand">Systems &amp; Autonomous Robotics Mentor</p>
+                <div>
+                  <h3 class="text-base font-semibold text-foreground">Society of Robotics &amp; Automation (SRA), VJTI</h3>
+                  <p class="text-xs font-medium text-accent-brand font-mono">Systems &amp; Autonomous Robotics Mentor</p>
                 </div>
               </div>
-              <div class="text-xs font-mono text-muted-foreground md:text-right pl-18 md:pl-0">
+              <div class="text-xs font-mono text-muted-foreground sm:text-right pl-16 sm:pl-0">
                 May 2024 &mdash; Present<br>
-                <span class="text-[11px] text-muted-foreground/70">Mumbai, India</span>
+                <span class="text-[11px] text-muted-foreground/70">Mumbai, India (On-Site)</span>
               </div>
-            </main>
-            <div class="mt-4 pl-2 space-y-2 text-xs text-muted-foreground leading-relaxed">
-              <p>&bull; Developed control software, sensor fusion, and state estimation algorithms for the Gyroglider rough terrain robotics platform and the Ballerina Cappucina omnidirectional robot.</p>
-              <p>&bull; Mentored 150+ first year engineering students across robotics workshops, systems programming in C++, and embedded firmware architecture.</p>
-              <p>&bull; Participated in the SRA AutoSim Challenge (SAC) developing autonomous navigation routines.</p>
             </div>
-            <div class="mt-4 pl-2 flex flex-wrap gap-1.5">
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">C++</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Java</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">ROS</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Linux</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Control Systems</span>
+
+            <!-- Summary -->
+            <div class="mt-4 pl-1 space-y-2">
+              <div class="text-xs font-mono text-neutral-400 font-semibold flex items-center gap-1.5">
+                <span>📋</span> <span>Summary</span>
+              </div>
+              <div class="space-y-1.5 text-xs text-muted-foreground leading-relaxed pl-1">
+                <p>&bull; Developed autonomous systems and control software for the Gyroglider rough-terrain robotics platform and Ballerina Cappucina omnidirectional robot.</p>
+                <p>&bull; Mentored 150+ first-year engineering students across low-level systems programming in C++, embedded firmware architecture, and ROS.</p>
+                <p>&bull; Winner at SRA AutoSim Challenge (SAC) autonomous simulation track.</p>
+              </div>
             </div>
-          </section>
+
+            <!-- Tools & Technologies -->
+            <div class="mt-4 pl-1 space-y-2">
+              <div class="text-xs font-mono text-neutral-400 font-semibold flex items-center gap-1.5">
+                <span>🛠</span> <span>Tools &amp; Technologies</span>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pl-1">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">C++</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Java</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">ROS</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Linux</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Control Systems</span>
+              </div>
+            </div>
+          </div>
 
           <!-- Card 2: TPO CR VJTI -->
-          <section class="group/card flex flex-col h-full pb-6">
-            <main class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between pl-2">
+          <div class="group/card flex flex-col h-full pb-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pl-1">
               <div class="flex items-center gap-4">
-                <div class="relative flex items-center justify-center overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-950 w-14 h-14 shrink-0 shadow-sm transition-all duration-300 group-hover/card:border-accent-brand/40">
+                <div class="relative flex items-center justify-center overflow-hidden rounded-xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 w-12 h-12 shrink-0 shadow-sm transition-all duration-300 group-hover/card:border-accent-brand/40">
                   <span class="font-mono font-bold text-sm text-foreground">TPO</span>
                 </div>
-                <div class="flex flex-col">
-                  <h3 class="text-lg font-semibold text-foreground">Training &amp; Placement Office (TPO), VJTI Mumbai</h3>
-                  <p class="text-sm font-medium text-accent-brand">Class Representative (CR) &amp; Placement Coordinator</p>
+                <div>
+                  <h3 class="text-base font-semibold text-foreground">Training &amp; Placement Office (TPO), VJTI Mumbai</h3>
+                  <p class="text-xs font-medium text-accent-brand font-mono">Class Representative (CR) &amp; Placement Coordinator</p>
                 </div>
               </div>
-              <div class="text-xs font-mono text-muted-foreground md:text-right pl-18 md:pl-0">
+              <div class="text-xs font-mono text-muted-foreground sm:text-right pl-16 sm:pl-0">
                 2024 &mdash; Present<br>
                 <span class="text-[11px] text-muted-foreground/70">Mumbai, India</span>
               </div>
-            </main>
-            <div class="mt-4 pl-2 space-y-2 text-xs text-muted-foreground leading-relaxed">
-              <p>&bull; Serving as elected Class Representative (CR) and department student placement coordinator for Electronics Engineering at VJTI.</p>
-              <p>&bull; Facilitating corporate liaisons, recruitment drives, technical preparation sessions, and peer mentoring for campus hiring.</p>
-              <p>&bull; Acting as the liaison between students, faculty leadership, and industry partners for internship and full time hiring pipelines.</p>
             </div>
-            <div class="mt-4 pl-2 flex flex-wrap gap-1.5">
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Leadership</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Operations</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Coordination</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Industry Relations</span>
+
+            <!-- Summary -->
+            <div class="mt-4 pl-1 space-y-2">
+              <div class="text-xs font-mono text-neutral-400 font-semibold flex items-center gap-1.5">
+                <span>📋</span> <span>Summary</span>
+              </div>
+              <div class="space-y-1.5 text-xs text-muted-foreground leading-relaxed pl-1">
+                <p>&bull; Serving as elected Class Representative (CR) and student placement coordinator for Electronics Engineering at VJTI.</p>
+                <p>&bull; Coordinating corporate recruitment drives, technical preparation tracks, and campus recruitment operations.</p>
+                <p>&bull; Acting as liaison between students, faculty leadership, and technology recruiters.</p>
+              </div>
             </div>
-          </section>
+
+            <!-- Tools & Technologies -->
+            <div class="mt-4 pl-1 space-y-2">
+              <div class="text-xs font-mono text-neutral-400 font-semibold flex items-center gap-1.5">
+                <span>🛠</span> <span>Skills &amp; Operations</span>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pl-1">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Leadership</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Operations</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Coordination</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Industry Relations</span>
+              </div>
+            </div>
+          </div>
 
         </div>
       </section>
 
-      <!-- ==================== PROJECTS SECTION (Strictly Java + feedrank) ==================== -->
+      <!-- ==================== PROJECTS SECTION (Strictly Java + FeedRank) ==================== -->
       <section id="projects" class="space-y-6">
-        <h2 class="group relative flex items-center gap-3 pl-3 text-base font-mono uppercase tracking-widest text-muted-foreground">
-          <span aria-hidden="true" class="absolute left-0 top-1/2 h-4 w-0.5 -translate-y-1/2 rounded-full bg-accent-brand"></span>
-          Projects
+        <h2 class="group relative flex items-center gap-3 pl-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+          <span aria-hidden="true" class="absolute left-0 top-1/2 h-3.5 w-0.5 -translate-y-1/2 rounded-full bg-accent-brand"></span>
+          PROJECTS
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
 
           <!-- Project 1: echo-log (Java 21) -->
-          <section class="group/card flex flex-col h-full pb-6 px-2">
-            <div class="relative w-full aspect-3/2 rounded-xl overflow-hidden mb-4 border border-neutral-200 dark:border-neutral-800 transition-all duration-300 group-hover/card:border-accent-brand/40 group-hover/card:shadow-lg group-hover/card:shadow-accent-brand/10 bg-neutral-950">
-              <img src="images/project-echolog.svg" alt="echo-log" class="object-cover w-full h-full transition-transform duration-500 ease-out group-hover/card:scale-105">
-            </div>
-            <main class="flex flex-col grow p-2">
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-semibold transition-colors duration-300 group-hover/card:text-accent-brand">
-                  echo-log
-                </h3>
-                <a href="https://github.com/sohamukute/echo-log" target="_blank" rel="noopener noreferrer" class="cursor-pointer text-muted-foreground hover:text-accent-brand transition-colors p-1" aria-label="GitHub Repository">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg>
-                </a>
+          <div class="group/card flex flex-col justify-between rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-card p-3 sm:p-3.5 transition-all duration-300 hover:border-accent-brand/40 hover:shadow-lg hover:shadow-accent-brand/5">
+            <div>
+              <div class="relative w-full aspect-3/2 rounded-xl overflow-hidden mb-3.5 border border-neutral-200 dark:border-neutral-800/80 bg-neutral-950">
+                <img src="images/project-echolog.svg" alt="echo-log" class="object-cover w-full h-full transition-transform duration-500 ease-out group-hover/card:scale-105">
               </div>
-              <p class="text-sm text-muted-foreground mb-4 grow leading-relaxed">
-                A distributed log broker inspired by Apache Kafka, built from raw Java NIO selectors. Features append only segment files, offset indexed lookups, custom binary wire protocol, consumer groups, and ZooKeeper leader election.
-              </p>
-              
-              <div class="mb-4">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Technologies</h4>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Java 21</span>
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Java NIO</span>
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">ZooKeeper</span>
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Docker</span>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1.5">
+                  <h3 class="text-base font-bold text-neutral-900 dark:text-neutral-100 group-hover/card:text-accent-brand transition-colors">
+                    echo-log
+                  </h3>
+                  <a href="https://github.com/sohamukute/echo-log" target="_blank" rel="noopener noreferrer" class="cursor-pointer text-muted-foreground hover:text-accent-brand transition-colors p-1" aria-label="GitHub Repository">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg>
+                  </a>
+                </div>
+                <p class="text-xs text-muted-foreground mb-3 leading-relaxed line-clamp-3">
+                  A distributed log broker inspired by Apache Kafka, built from raw Java NIO selectors. Features append-only segment files, offset-indexed lookups, custom binary wire protocol, and ZooKeeper leader election.
+                </p>
+                <div class="mb-3">
+                  <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-muted-foreground mb-1.5">Technologies</div>
+                  <div class="flex flex-wrap gap-1">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Java 21</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Java NIO</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">ZooKeeper</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Docker</span>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div class="flex items-center justify-between pt-2 border-t border-border/40 text-xs">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Completed
-                </span>
-                <a href="https://github.com/sohamukute/echo-log" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground">
-                  View details &rarr;
-                </a>
-              </div>
-            </main>
-          </section>
+            <div class="px-1 pt-2 border-t border-border/40 flex items-center justify-between text-xs">
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Completed
+              </span>
+              <a href="https://github.com/sohamukute/echo-log" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-muted-foreground hover:text-foreground">
+                View details &rarr;
+              </a>
+            </div>
+          </div>
 
           <!-- Project 2: grabmyseat (Java / Spring Boot) -->
-          <section class="group/card flex flex-col h-full pb-6 px-2">
-            <div class="relative w-full aspect-3/2 rounded-xl overflow-hidden mb-4 border border-neutral-200 dark:border-neutral-800 transition-all duration-300 group-hover/card:border-accent-brand/40 group-hover/card:shadow-lg group-hover/card:shadow-accent-brand/10 bg-neutral-950">
-              <img src="images/project-grabmyseat.svg" alt="grabmyseat" class="object-cover w-full h-full transition-transform duration-500 ease-out group-hover/card:scale-105">
-            </div>
-            <main class="flex flex-col grow p-2">
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-semibold transition-colors duration-300 group-hover/card:text-accent-brand">
-                  grabmyseat
-                </h3>
-                <a href="https://github.com/sohamukute/grabmyseat" target="_blank" rel="noopener noreferrer" class="cursor-pointer text-muted-foreground hover:text-accent-brand transition-colors p-1" aria-label="GitHub Repository">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg>
-                </a>
+          <div class="group/card flex flex-col justify-between rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-card p-3 sm:p-3.5 transition-all duration-300 hover:border-accent-brand/40 hover:shadow-lg hover:shadow-accent-brand/5">
+            <div>
+              <div class="relative w-full aspect-3/2 rounded-xl overflow-hidden mb-3.5 border border-neutral-200 dark:border-neutral-800/80 bg-neutral-950">
+                <img src="images/project-grabmyseat.svg" alt="grabmyseat" class="object-cover w-full h-full transition-transform duration-500 ease-out group-hover/card:scale-105">
               </div>
-              <p class="text-sm text-muted-foreground mb-4 grow leading-relaxed">
-                High concurrency ticket booking and payments engine designed to protect finite inventory from overselling during flash sales. Seven microservices with ordered Redisson locks, atomic Redis reservations, and a distributed Saga orchestrator.
-              </p>
-
-              <div class="mb-4">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Technologies</h4>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Java 21</span>
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Spring Boot 3</span>
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Redis</span>
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">PostgreSQL</span>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1.5">
+                  <h3 class="text-base font-bold text-neutral-900 dark:text-neutral-100 group-hover/card:text-accent-brand transition-colors">
+                    grabmyseat
+                  </h3>
+                  <a href="https://github.com/sohamukute/grabmyseat" target="_blank" rel="noopener noreferrer" class="cursor-pointer text-muted-foreground hover:text-accent-brand transition-colors p-1" aria-label="GitHub Repository">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg>
+                  </a>
+                </div>
+                <p class="text-xs text-muted-foreground mb-3 leading-relaxed line-clamp-3">
+                  High-concurrency ticket booking and payments engine designed to stop finite inventory from overselling during flash sales. Seven microservices with Redisson locks and distributed Sagas.
+                </p>
+                <div class="mb-3">
+                  <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-muted-foreground mb-1.5">Technologies</div>
+                  <div class="flex flex-wrap gap-1">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Java 21</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Spring Boot 3</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Redis</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">PostgreSQL</span>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div class="flex items-center justify-between pt-2 border-t border-border/40 text-xs">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Completed
-                </span>
-                <a href="https://github.com/sohamukute/grabmyseat" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground">
-                  View details &rarr;
-                </a>
-              </div>
-            </main>
-          </section>
+            <div class="px-1 pt-2 border-t border-border/40 flex items-center justify-between text-xs">
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Completed
+              </span>
+              <a href="https://github.com/sohamukute/grabmyseat" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-muted-foreground hover:text-foreground">
+                View details &rarr;
+              </a>
+            </div>
+          </div>
 
           <!-- Project 3: feedrank (Requested by user) -->
-          <section class="group/card flex flex-col h-full pb-6 px-2">
-            <div class="relative w-full aspect-3/2 rounded-xl overflow-hidden mb-4 border border-neutral-200 dark:border-neutral-800 transition-all duration-300 group-hover/card:border-accent-brand/40 group-hover/card:shadow-lg group-hover/card:shadow-accent-brand/10 bg-neutral-950">
-              <img src="images/project-feedrank.svg" alt="feedrank" class="object-cover w-full h-full transition-transform duration-500 ease-out group-hover/card:scale-105">
-            </div>
-            <main class="flex flex-col grow p-2">
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-semibold transition-colors duration-300 group-hover/card:text-accent-brand">
-                  feedrank
-                </h3>
-                <a href="https://github.com/sohamukute/feedrank" target="_blank" rel="noopener noreferrer" class="cursor-pointer text-muted-foreground hover:text-accent-brand transition-colors p-1" aria-label="GitHub Repository">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg>
-                </a>
+          <div class="group/card flex flex-col justify-between rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-card p-3 sm:p-3.5 transition-all duration-300 hover:border-accent-brand/40 hover:shadow-lg hover:shadow-accent-brand/5">
+            <div>
+              <div class="relative w-full aspect-3/2 rounded-xl overflow-hidden mb-3.5 border border-neutral-200 dark:border-neutral-800/80 bg-neutral-950">
+                <img src="images/project-feedrank.svg" alt="feedrank" class="object-cover w-full h-full transition-transform duration-500 ease-out group-hover/card:scale-105">
               </div>
-              <p class="text-sm text-muted-foreground mb-4 grow leading-relaxed">
-                Two stage recommendation engine trained on 54 million Amazon review interactions across 6.1 million users and 1.2 million items. ALS matrix factorization retrieves candidates from a FAISS index, while LightGBM re ranks them in 2 to 4 milliseconds.
-              </p>
-
-              <div class="mb-4">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Technologies</h4>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Python</span>
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">FAISS</span>
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">LightGBM</span>
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">FastAPI</span>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1.5">
+                  <h3 class="text-base font-bold text-neutral-900 dark:text-neutral-100 group-hover/card:text-accent-brand transition-colors">
+                    feedrank
+                  </h3>
+                  <a href="https://github.com/sohamukute/feedrank" target="_blank" rel="noopener noreferrer" class="cursor-pointer text-muted-foreground hover:text-accent-brand transition-colors p-1" aria-label="GitHub Repository">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg>
+                  </a>
+                </div>
+                <p class="text-xs text-muted-foreground mb-3 leading-relaxed line-clamp-3">
+                  Two-stage recommendation engine trained on 54 million Amazon review interactions across 6.1 million users. ALS matrix factorization retrieves candidates from a FAISS vector index, while LightGBM re-ranks in 2 to 4ms.
+                </p>
+                <div class="mb-3">
+                  <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-muted-foreground mb-1.5">Technologies</div>
+                  <div class="flex flex-wrap gap-1">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Python</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">FAISS</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">LightGBM</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">FastAPI</span>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div class="flex items-center justify-between pt-2 border-t border-border/40 text-xs">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Completed
-                </span>
-                <a href="https://github.com/sohamukute/feedrank" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground">
-                  View details &rarr;
-                </a>
-              </div>
-            </main>
-          </section>
+            <div class="px-1 pt-2 border-t border-border/40 flex items-center justify-between text-xs">
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Completed
+              </span>
+              <a href="https://github.com/sohamukute/feedrank" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-muted-foreground hover:text-foreground">
+                View details &rarr;
+              </a>
+            </div>
+          </div>
 
           <!-- Project 4: daakdash (Java / Spring Boot) -->
-          <section class="group/card flex flex-col h-full pb-6 px-2">
-            <div class="relative w-full aspect-3/2 rounded-xl overflow-hidden mb-4 border border-neutral-200 dark:border-neutral-800 transition-all duration-300 group-hover/card:border-accent-brand/40 group-hover/card:shadow-lg group-hover/card:shadow-accent-brand/10 bg-neutral-950">
-              <img src="images/project-daakdash.svg" alt="daakdash" class="object-cover w-full h-full transition-transform duration-500 ease-out group-hover/card:scale-105">
-            </div>
-            <main class="flex flex-col grow p-2">
-              <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-semibold transition-colors duration-300 group-hover/card:text-accent-brand">
-                  daakdash
-                </h3>
-                <a href="https://github.com/sohamukute/daakdash" target="_blank" rel="noopener noreferrer" class="cursor-pointer text-muted-foreground hover:text-accent-brand transition-colors p-1" aria-label="GitHub Repository">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg>
-                </a>
+          <div class="group/card flex flex-col justify-between rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-card p-3 sm:p-3.5 transition-all duration-300 hover:border-accent-brand/40 hover:shadow-lg hover:shadow-accent-brand/5">
+            <div>
+              <div class="relative w-full aspect-3/2 rounded-xl overflow-hidden mb-3.5 border border-neutral-200 dark:border-neutral-800/80 bg-neutral-950">
+                <img src="images/project-daakdash.svg" alt="daakdash" class="object-cover w-full h-full transition-transform duration-500 ease-out group-hover/card:scale-105">
               </div>
-              <p class="text-sm text-muted-foreground mb-4 grow leading-relaxed">
-                Depot to door courier logistics platform designed around an auditable parcel state machine with optimistic concurrency, JWT gateway routing, Redis rate limiting, and distance based delivery partner assignment.
-              </p>
-
-              <div class="mb-4">
-                <h4 class="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Technologies</h4>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Java 21</span>
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Spring Boot 3</span>
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">PostgreSQL</span>
-                  <span class="px-2 py-0.5 rounded text-xs font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Redis</span>
+              <div class="px-1">
+                <div class="flex items-center justify-between mb-1.5">
+                  <h3 class="text-base font-bold text-neutral-900 dark:text-neutral-100 group-hover/card:text-accent-brand transition-colors">
+                    daakdash
+                  </h3>
+                  <a href="https://github.com/sohamukute/daakdash" target="_blank" rel="noopener noreferrer" class="cursor-pointer text-muted-foreground hover:text-accent-brand transition-colors p-1" aria-label="GitHub Repository">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg>
+                  </a>
+                </div>
+                <p class="text-xs text-muted-foreground mb-3 leading-relaxed line-clamp-3">
+                  Depot-to-door courier logistics platform designed around an auditable parcel state machine with optimistic concurrency, JWT gateway routing, Redis rate limiting, and distance-based partner assignment.
+                </p>
+                <div class="mb-3">
+                  <div class="text-[10px] font-mono font-bold uppercase tracking-wider text-muted-foreground mb-1.5">Technologies</div>
+                  <div class="flex flex-wrap gap-1">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Java 21</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Spring Boot 3</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">PostgreSQL</span>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400">Redis</span>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div class="flex items-center justify-between pt-2 border-t border-border/40 text-xs">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Completed
-                </span>
-                <a href="https://github.com/sohamukute/daakdash" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground">
-                  View details &rarr;
-                </a>
-              </div>
-            </main>
-          </section>
+            <div class="px-1 pt-2 border-t border-border/40 flex items-center justify-between text-xs">
+              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> Completed
+              </span>
+              <a href="https://github.com/sohamukute/daakdash" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-muted-foreground hover:text-foreground">
+                View details &rarr;
+              </a>
+            </div>
+          </div>
 
         </div>
+
+        <!-- View More Centered Pill matching Image #1 -->
+        <div class="flex justify-center pt-2">
+          <a href="https://github.com/sohamukute?tab=repositories" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-300 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/60 text-xs font-semibold text-neutral-800 dark:text-neutral-300 hover:border-neutral-400 dark:hover:border-neutral-700 transition-all">
+            <span>View more on GitHub</span>
+            <span>&nearr;</span>
+          </a>
+        </div>
+
       </section>
 
-      <!-- ==================== GITHUB ACTIVITY ==================== -->
-      <section class="space-y-6 mb-10">
-        <h2 class="group relative flex items-center gap-3 pl-3 text-base font-mono uppercase tracking-widest text-muted-foreground">
-          <span aria-hidden="true" class="absolute left-0 top-1/2 h-4 w-0.5 -translate-y-1/2 rounded-full bg-accent-brand"></span>
-          GitHub Activity
+      <!-- ==================== GITHUB ACTIVITY (2026) ==================== -->
+      <section class="space-y-4">
+        <h2 class="group relative flex items-center gap-3 pl-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+          <span aria-hidden="true" class="absolute left-0 top-1/2 h-3.5 w-0.5 -translate-y-1/2 rounded-full bg-accent-brand"></span>
+          GITHUB ACTIVITY (2026)
         </h2>
 
-        <div class="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-900/50 p-5 overflow-hidden">
+        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-900/40 p-5 overflow-hidden">
           <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-mono text-muted-foreground">Contributions</span>
+            <span class="text-xs font-mono text-muted-foreground">Contributions so far</span>
             <a href="https://github.com/sohamukute" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-accent-brand hover:underline">
               @sohamukute &rarr;
             </a>
           </div>
           <img src="https://ghchart.rshah.org/22d3ee/sohamukute" alt="Soham Kute GitHub Contribution Chart" class="w-full h-auto filter dark:invert-[0.15] dark:brightness-110">
+          
+          <!-- Visitor counter matching Image #1 -->
+          <div class="text-center pt-5 pb-1 text-xs text-muted-foreground font-mono space-y-1 border-t border-border/30 mt-5">
+            <div>You are the <span class="font-bold text-foreground">532<sup>nd</sup></span> visitor</div>
+            <div class="text-[11px] text-muted-foreground/80">Thanks for stopping by ☕</div>
+          </div>
         </div>
       </section>
 
-      <!-- ==================== LEARNING & FIELD NOTES (The "add lern here" requirement) ==================== -->
-      <section id="learning" class="space-y-6">
+      <!-- ==================== LEARNING & FIELD NOTES (The "and learning" requirement) ==================== -->
+      <section id="learning" class="space-y-4">
         <div class="flex items-center justify-between">
-          <h2 class="group relative flex items-center gap-3 pl-3 text-base font-mono uppercase tracking-widest text-muted-foreground">
-            <span aria-hidden="true" class="absolute left-0 top-1/2 h-4 w-0.5 -translate-y-1/2 rounded-full bg-accent-brand"></span>
-            Learning &amp; Field Notes
+          <h2 class="group relative flex items-center gap-3 pl-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+            <span aria-hidden="true" class="absolute left-0 top-1/2 h-3.5 w-0.5 -translate-y-1/2 rounded-full bg-accent-brand"></span>
+            LEARNING &amp; FIELD NOTES
           </h2>
           <a href="/learn/" class="text-xs font-mono text-accent-brand hover:underline font-semibold">
             Open /learn/ &rarr;
           </a>
         </div>
 
-        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-900/50 p-6 space-y-6">
+        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-900/40 p-5 sm:p-6 space-y-5">
           <div class="space-y-1.5">
-            <h3 class="text-xl font-semibold text-foreground">
+            <h3 class="text-base sm:text-lg font-bold text-foreground">
               Java &amp; Distributed Systems Engineering Field Notes
             </h3>
-            <p class="text-sm text-muted-foreground leading-relaxed">
-              Exhaustive technical study notebook covering backend systems from first principles. 137 chapters synthesized into deep mental models with clean diagrams.
+            <p class="text-xs text-muted-foreground leading-relaxed">
+              Exhaustive technical study notebook covering backend systems from first principles. 137 chapters synthesized into deep mental models with clean architectural diagrams.
             </p>
           </div>
 
           <!-- 4 Course Cards Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             
-            <a href="/learn/java/" class="group p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-background hover:border-accent-brand/40 transition-all flex items-center justify-between">
+            <a href="/learn/java/" class="group p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-background hover:border-accent-brand/40 transition-all flex items-center justify-between">
               <div>
-                <div class="text-sm font-semibold text-foreground group-hover:text-accent-brand transition-colors">01. Core Java</div>
-                <div class="text-xs text-muted-foreground font-mono">52 Chapters &bull; JVM to Modern Java 21</div>
+                <div class="text-xs font-semibold text-foreground group-hover:text-accent-brand transition-colors">01. Core Java</div>
+                <div class="text-[11px] text-muted-foreground font-mono">52 Chapters &bull; JVM to Modern Java 21</div>
               </div>
-              <span class="text-sm text-muted-foreground group-hover:text-accent-brand transition-colors">&rarr;</span>
+              <span class="text-xs text-muted-foreground group-hover:text-accent-brand transition-colors">&rarr;</span>
             </a>
 
-            <a href="/learn/spring-boot/" class="group p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-background hover:border-accent-brand/40 transition-all flex items-center justify-between">
+            <a href="/learn/spring-boot/" class="group p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-background hover:border-accent-brand/40 transition-all flex items-center justify-between">
               <div>
-                <div class="text-sm font-semibold text-foreground group-hover:text-accent-brand transition-colors">02. Spring Boot</div>
-                <div class="text-xs text-muted-foreground font-mono">44 Lectures &bull; IoC, JPA, JWT &amp; Security</div>
+                <div class="text-xs font-semibold text-foreground group-hover:text-accent-brand transition-colors">02. Spring Boot</div>
+                <div class="text-[11px] text-muted-foreground font-mono">44 Lectures &bull; IoC, JPA, JWT &amp; Security</div>
               </div>
-              <span class="text-sm text-muted-foreground group-hover:text-accent-brand transition-colors">&rarr;</span>
+              <span class="text-xs text-muted-foreground group-hover:text-accent-brand transition-colors">&rarr;</span>
             </a>
 
-            <a href="/learn/microservices/" class="group p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-background hover:border-accent-brand/40 transition-all flex items-center justify-between">
+            <a href="/learn/microservices/" class="group p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-background hover:border-accent-brand/40 transition-all flex items-center justify-between">
               <div>
-                <div class="text-sm font-semibold text-foreground group-hover:text-accent-brand transition-colors">03. Microservices</div>
-                <div class="text-xs text-muted-foreground font-mono">22 Lectures &bull; Eureka, Resilience4j, ShedLock</div>
+                <div class="text-xs font-semibold text-foreground group-hover:text-accent-brand transition-colors">03. Microservices</div>
+                <div class="text-[11px] text-muted-foreground font-mono">22 Lectures &bull; Eureka, Resilience4j, ShedLock</div>
               </div>
-              <span class="text-sm text-muted-foreground group-hover:text-accent-brand transition-colors">&rarr;</span>
+              <span class="text-xs text-muted-foreground group-hover:text-accent-brand transition-colors">&rarr;</span>
             </a>
 
-            <a href="/learn/junit-mockito/" class="group p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-background hover:border-accent-brand/40 transition-all flex items-center justify-between">
+            <a href="/learn/junit-mockito/" class="group p-3.5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-background hover:border-accent-brand/40 transition-all flex items-center justify-between">
               <div>
-                <div class="text-sm font-semibold text-foreground group-hover:text-accent-brand transition-colors">04. JUnit 5 &amp; Mockito</div>
-                <div class="text-xs text-muted-foreground font-mono">19 Lectures &bull; Unit Testing &amp; Mocking</div>
+                <div class="text-xs font-semibold text-foreground group-hover:text-accent-brand transition-colors">04. JUnit 5 &amp; Mockito</div>
+                <div class="text-[11px] text-muted-foreground font-mono">19 Lectures &bull; Unit Testing &amp; Mocking</div>
               </div>
-              <span class="text-sm text-muted-foreground group-hover:text-accent-brand transition-colors">&rarr;</span>
+              <span class="text-xs text-muted-foreground group-hover:text-accent-brand transition-colors">&rarr;</span>
             </a>
 
           </div>
 
           <div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t border-border/40 text-xs">
-            <span class="text-muted-foreground font-mono">137 in depth chapters &bull; Built with clean semantic markdown</span>
-            <a href="/learn/" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-foreground text-background font-semibold hover:bg-accent-brand hover:text-foreground transition-all">
+            <span class="text-muted-foreground font-mono text-[11px]">137 in depth chapters &bull; Built with clean semantic markdown</span>
+            <a href="/learn/" class="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-lg bg-foreground text-background font-semibold hover:bg-accent-brand hover:text-foreground transition-all text-xs">
               <span>Read Full Notes Platform</span>
               <span>&rarr;</span>
             </a>
@@ -578,14 +653,14 @@
         </div>
       </section>
 
-      <!-- ==================== ABOUT SECTION (No Photo) ==================== -->
-      <section id="about" class="space-y-6 mb-12">
-        <h2 class="group relative flex items-center gap-3 pl-3 text-base font-mono uppercase tracking-widest text-muted-foreground">
-          <span aria-hidden="true" class="absolute left-0 top-1/2 h-4 w-0.5 -translate-y-1/2 rounded-full bg-accent-brand"></span>
-          About
+      <!-- ==================== ABOUT SECTION (Clean Text, No Photo) ==================== -->
+      <section id="about" class="space-y-4">
+        <h2 class="group relative flex items-center gap-3 pl-3 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+          <span aria-hidden="true" class="absolute left-0 top-1/2 h-3.5 w-0.5 -translate-y-1/2 rounded-full bg-accent-brand"></span>
+          ABOUT
         </h2>
 
-        <div class="space-y-4 px-2 text-sm text-muted-foreground leading-relaxed">
+        <div class="space-y-3.5 px-1 text-sm text-muted-foreground leading-relaxed">
           <p>
             I&#39;m Soham Kute, a Systems and Backend Engineer based in Mumbai, studying Electronics Engineering with an Aerospace minor at <span class="text-foreground font-semibold">Veermata Jijabai Technological Institute (VJTI)</span> (2023&ndash;2027).
           </p>
@@ -600,12 +675,37 @@
 
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="border-t border-border/40 py-8 text-center text-xs font-mono text-muted-foreground">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
-        <span>&copy; <span id="yearSpan"></span> Soham Kute &bull; VJTI Mumbai</span>
-        <span>Built with clean semantic HTML &amp; Tailwind</span>
+    <!-- ==================== FOOTER (Exact replica of Image #1) ==================== -->
+    <footer class="mt-12 border-t border-neutral-200 dark:border-neutral-800/80 pt-8 pb-12 space-y-6">
+      
+      <!-- Top Row: Logo & Social Icons -->
+      <div class="flex items-center justify-between">
+        <a href="#" class="font-telma text-2xl font-bold tracking-tight text-foreground transition-opacity hover:opacity-80">
+          s<span class="text-accent-brand">.</span>
+        </a>
+
+        <div class="flex items-center gap-4 text-muted-foreground">
+          <a href="mailto:officialsohamkute@gmail.com" class="hover:text-foreground transition-colors" aria-label="Email">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          </a>
+          <a href="https://github.com/sohamukute" target="_blank" rel="noopener noreferrer" class="hover:text-foreground transition-colors" aria-label="GitHub">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://x.com/sohamukute" target="_blank" rel="noopener noreferrer" class="hover:text-foreground transition-colors" aria-label="X">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/sohamukute/" target="_blank" rel="noopener noreferrer" class="hover:text-foreground transition-colors" aria-label="LinkedIn">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </a>
+        </div>
       </div>
+
+      <!-- Bottom Row: Copyright & Callout -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs font-mono text-muted-foreground">
+        <span>&copy; <span id="yearSpan"></span> Soham. &#9729;</span>
+        <span>Interested in working together? Reach out.</span>
+      </div>
+
     </footer>
 
   </div>

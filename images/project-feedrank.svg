@@ -1,50 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="100%" height="100%">
   <defs>
-    <radialGradient id="glow" cx="80%" cy="20%" r="60%">
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="100%">
+      <stop offset="0%" stop-color="#181324" />
+      <stop offset="100%" stop-color="#0b0814" />
+    </linearGradient>
+    <linearGradient id="glow3" cx="50%" cy="20%" r="55%">
       <stop offset="0%" stop-color="#a855f7" stop-opacity="0.18" />
-      <stop offset="100%" stop-color="#0d0d0d" stop-opacity="0" />
-    </radialGradient>
-    <linearGradient id="grid-fade" x1="0" y1="0" x2="0" y2="100%">
-      <stop offset="0%" stop-color="#262626" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#262626" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
     </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="600" height="400" fill="#0d0d0d" />
-  <rect width="600" height="400" fill="url(#glow)" />
+  <rect width="900" height="600" fill="url(#bg3)"/>
+  <rect width="900" height="600" fill="url(#glow3)"/>
 
-  <!-- Subtle Blueprint Grid lines -->
-  <g stroke="url(#grid-fade)" stroke-width="1">
-    <line x1="60" y1="0" x2="60" y2="400" />
-    <line x1="180" y1="0" x2="180" y2="400" />
-    <line x1="300" y1="0" x2="300" y2="400" />
-    <line x1="420" y1="0" x2="420" y2="400" />
-    <line x1="540" y1="0" x2="540" y2="400" />
-    <line x1="0" y1="80" x2="600" y2="80" />
-    <line x1="0" y1="160" x2="600" y2="160" />
-    <line x1="0" y1="240" x2="600" y2="240" />
-    <line x1="0" y1="320" x2="600" y2="320" />
-  </g>
+  <g transform="translate(60, 50)">
+    <rect width="780" height="500" rx="14" fill="#0f0c18" stroke="#2e2344" stroke-width="1.5"/>
+    
+    <rect width="780" height="42" rx="14" fill="#1b152b"/>
+    <rect x="0" y="28" width="780" height="14" fill="#1b152b"/>
+    <line x1="0" y1="42" x2="780" y2="42" stroke="#2e2344" stroke-width="1"/>
+    
+    <circle cx="24" cy="21" r="5.5" fill="#ef4444" />
+    <circle cx="42" cy="21" r="5.5" fill="#f59e0b" />
+    <circle cx="10" cy="21" r="5.5" fill="#10b981" />
+    <text x="390" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#c084fc">FeedRank • Two-Stage Recommendation Architecture</text>
 
-  <!-- Top Category Tag -->
-  <g transform="translate(48, 56)">
-    <rect width="110" height="24" rx="6" fill="#171717" stroke="#2e2e2e" stroke-width="1"/>
-    <text x="55" y="16" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#a855f7" letter-spacing="0.08em">RECSYS</text>
-  </g>
+    <!-- Funnel Pipeline Stages -->
+    <g transform="translate(40, 70)">
+      
+      <!-- Stage 1: Candidate Pool -->
+      <g transform="translate(0, 30)">
+        <rect width="190" height="180" rx="10" fill="#1a1429" stroke="#3b2d5c"/>
+        <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#e9d5ff">1. FULL INVENTORY</text>
+        <text x="20" y="70" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="800" fill="#ffffff">1.2M</text>
+        <text x="20" y="92" font-family="-apple-system, sans-serif" font-size="11" fill="#a855f7">Amazon Products</text>
+        <text x="20" y="130" font-family="-apple-system, sans-serif" font-size="11" fill="#94a3b8">54M Interactions</text>
+        <text x="20" y="150" font-family="-apple-system, sans-serif" font-size="11" fill="#94a3b8">DuckDB Parquet</text>
+      </g>
 
-  <!-- Main Headline -->
-  <text x="48" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="900" fill="#fafafa" letter-spacing="-0.03em">
-    TWO STAGE RANKING.
-  </text>
-  <text x="48" y="195" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="900" fill="#a855f7" letter-spacing="-0.03em">
-    ALS + LIGHTGBM.
-  </text>
+      <path d="M 205 120 L 245 120" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,4"/>
 
-  <!-- Code Hint at Bottom -->
-  <g transform="translate(48, 320)">
-    <rect width="504" height="42" rx="8" fill="#141414" stroke="#262626" stroke-width="1"/>
-    <circle cx="20" cy="21" r="4" fill="#a855f7" />
-    <text x="36" y="26" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="500" fill="#a1a1a1">54M Interactions &gt; FAISS ANN Index &gt; 2ms Re-rank</text>
+      <!-- Stage 2: Retrieval (FAISS) -->
+      <g transform="translate(260, 30)">
+        <rect width="190" height="180" rx="10" fill="#1a1429" stroke="#3b2d5c"/>
+        <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#e9d5ff">2. RETRIEVAL (ALS)</text>
+        <text x="20" y="70" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="800" fill="#a855f7">400</text>
+        <text x="20" y="92" font-family="-apple-system, sans-serif" font-size="11" fill="#e9d5ff">Candidate Candidates</text>
+        <text x="20" y="130" font-family="-apple-system, sans-serif" font-size="11" fill="#94a3b8">FAISS ANN Vector Index</text>
+        <text x="20" y="150" font-family="-apple-system, sans-serif" font-size="11" fill="#94a3b8">Latency: &lt;1.2ms</text>
+      </g>
+
+      <path d="M 465 120 L 505 120" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,4"/>
+
+      <!-- Stage 3: Heavy Ranking (LightGBM) -->
+      <g transform="translate(520, 30)">
+        <rect width="180" height="180" rx="10" fill="#241b38" stroke="#7e22ce" stroke-width="1.5"/>
+        <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#f3e8ff">3. RE-RANKING</text>
+        <text x="20" y="70" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="800" fill="#10b981">Top 20</text>
+        <text x="20" y="92" font-family="-apple-system, sans-serif" font-size="11" fill="#c084fc">Personalized Feed</text>
+        <text x="20" y="130" font-family="-apple-system, sans-serif" font-size="11" fill="#94a3b8">LightGBM Ranker</text>
+        <text x="20" y="150" font-family="-apple-system, sans-serif" font-size="11" fill="#10b981">P99: 2.4ms</text>
+      </g>
+
+      <!-- Bottom Benchmark Card -->
+      <g transform="translate(0, 240)">
+        <rect width="700" height="110" rx="10" fill="#130e20" stroke="#2e2344"/>
+        <text x="20" y="30" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#d8b4fe">Production Offline &amp; Online Evaluation</text>
+        <text x="20" y="60" font-family="'JetBrains Mono', monospace" font-size="12" fill="#c084fc">• NDCG@10: 0.384 • MAP@20: 0.291 • Redis Feature Cache Hit: 99.4%</text>
+        <text x="20" y="85" font-family="'JetBrains Mono', monospace" font-size="12" fill="#94a3b8">• Cold-start fallback: category-popularity blending</text>
+      </g>
+    </g>
   </g>
 </svg>
